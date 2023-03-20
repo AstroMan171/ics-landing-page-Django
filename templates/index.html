@@ -1,0 +1,320 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Charter Schools | Great Schools for Students and Teachers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="{% static 'aos-master/dist/aos.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon_io/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon_io/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon_io/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'img/favicon_io/site.webmanifest' %}">
+    <!--<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>-->
+    
+</head>
+<body>
+
+    <nav>
+        <ul class="nav_links">
+            <li class="nav_link_1"><a class="white_link" href="https://integrationcharterschools.org/management/">our team</a></li>
+            <li class="nav_link_2"><a class="white_link" href="https://integrationcharterschools.org/?page_id=531">events</a></li>
+            <li class="nav_link_3"><a class="white_link" href="https://integrationcharterschools.org/about-us/">about</a></li>
+            <button type="button" class="nav_link_4" id="donate" href="https://integrationcharterschools.org/donate/">donate</button>
+            <a class="nav_link_6 white_link" href="#"><i style="font-size:48px" class="fa">&#xf0c9;</i></a>
+            <p class="white_link menu_text" id="menu_text">menu</p>
+        </ul>
+    </nav>
+<!-- <a class="nav_link_6 white_link" href="#">menu <img class="hamburger" src="images/hamburger_icon.svg"></a> -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="closebtn">&times;</a>
+        <a href="https://integrationcharterschools.org/news/">news</a>
+        <a href="https://integrationcharterschools.org/our-schools/">open house</a>
+        <a href="https://integrationcharterschools.org/zen/">blog</a>
+        <a href="https://integrationcharterschools.org/champions/">our supporters</a>
+        <a href="https://integrationcharterschools.org/contact-ics/">contact ICS</a>
+        <a href="https://integrationcharterschools.org/covid-19-resources/">COVID-19 resources</a>
+        <a href="https://integrationcharterschools.org/directory/">directory</a>
+        <a href="https://integrationcharterschools.org/our-board/">board</a>
+        <a href="https://integrationcharterschools.org/employee-portal/">employee portal</a>
+        <a href="https://integrationcharterschools.org/ics-documents/">ICS documents and board documents</a>
+        <a class="dropdown-btn" id='dropdown-btn1'>join the ICS team
+            <i class="fa fa-caret-down"></i>
+            <div class="dropdown-container" id="dropdown1">
+                <a href="https://integrationcharterschools.org/join-our-team/">join our team</a>
+                <a href="https://integrationcharterschools.org/jobs/">available positions</a>
+            </div>
+        </a>
+        <a class="dropdown-btn" id='dropdown-btn2'>alumni
+            <i class="fa fa-caret-down"></i>
+            <ul class="dropdown-container" id="dropdown2">
+                <a href="https://integrationcharterschools.org/mission-statement/">mission statement</a>
+                <a href="https://integrationcharterschools.org/category/alumni-news-and-updates/">alumni news and updates</a>
+                <a href="https://integrationcharterschools.org/alumni-gallery/">gallery</a>
+                <a href="https://integrationcharterschools.org/category/alumni-spotlight/">alumni spotlight</a>
+                <a href="https://integrationcharterschools.org/update-your-information/">update your information</a>
+            </ul>
+        </a>
+
+    </div>
+    <a class="scroll_top" id="scrollTop" href="#"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+
+    <div class="background_video">
+        <video autoplay muted loop width="1920" height="`940" >
+            <source src ="{% static 'vids/BGV.webm' %}" type="video/webm">
+        </video>
+        
+        <img id="ics_logo" src="{% static 'img/Asset1.svg' %}">
+
+        <h1 class="home_text" id="home_text" >Great Schools for Teachers and Students</h1>
+
+        <a href="#" class="scroll"><img src="{% static 'img/down_arrow.svg' %}"></a>
+    </div>
+
+    <section>
+
+        <div class="section1"> 
+
+           <div class="mission_title" >
+                <h5> <span class="h5_1">Our</span> <span class="h5_2">Mission</span></h5> 
+            </div>
+
+           <img class="underline" data-aos="zoom-out-left" data-aos-duration="3000" data-aos-delay="250" src="{% static 'img/underline.svg' %}">
+
+            <img class="blg1" src="{% static 'img/CC1.jpg' %}" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">
+
+            <img class="blg2" src="{% static 'img/CC3.jpg' %}" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">
+
+            <div class="summary" data-aos="zoom-out-up" data-aos-duration="3000">
+
+            <p class="p1" data-aos="zoom-out-up" data-aos-duration="8000">
+            <span class="h6_1">INTEGRATION</span> <span class="h6_2">CHARTER</span> <span class="h6_2">SCHOOLS</span> &lpar;<span class="h6_1">I</span><span class="h6_2">C</span><span class="h6_2">S</span>&rpar; is dedicated to providing innovative pathways to college that fully integrate students
+            living with emotional challenges and others with special needs&period; In building a network of associated schools which share
+            this common mission&comma;
+ <span class="h6_1">I</span><span class="h6_2">C</span><span class="h6_2">S</span> strives to fill gaps in public education. When fully realized&comma;
+ <span class="h6_1">I</span><span class="h6_2">C</span><span class="h6_2">S</span>&comma; in conjunction with the
+            local public schools&comma; will provide Staten Island parents of special needs children with an array of options which is
+            richer than that enjoyed by any other community in the United States&period;</p>
+
+            </div>
+
+        </div>
+
+            <div class="schools">
+
+                <h5 class="schools_title"> <span class="h5_1">Our</span> <span class="h5_2">Schools</span></h5>
+
+                    <ul class="school_img">
+
+                        <li data-aos="zoom-in-up" data-aos-duration="1200"><a href="https://lavelleprep.org/"><img class="lav_icon" src="{% static 'img/LavelleLogo.png' %}"></a></li>
+
+                        <li data-aos="zoom-in-up" data-aos-duration="1600"><a href="https://newventurescharter.org/"> <img class="nv_icon" src="{% static 'img/NewVenturesLogo.png' %}"></a></li>
+
+                        <li data-aos="zoom-in-up" data-aos-duration="2000"><a href="https://nicotracharter.org/"> <img class="nic_icon" src="{% static 'img/NicotraLogo.png' %}"></a></li>
+
+                        <li data-aos="zoom-in-up" data-aos-duration="2400"><a href="https://richmondprepcharter.org/"><img class="rich_icon" src="{% static 'img/RichmondLogo.png' %}"></a></li>
+
+                    </ul>
+            </div>
+
+            <div class="pres_section">
+
+                <img class="pres_img" src="{% static 'img/Pres.jpg' %}" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1850" data-aos-duration="1900" data-aos-offset="0">
+
+                <img class="quotes" src="{% static 'img/quotes.svg' %}" data-aos="zoom-out" data-aos-easing="linear" data-aos-duration="1750" data-aos-delay="900">
+
+                <p class="top_quote" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="1300"> Dear ICS Students&comma; Staff&comma; Families and Visitors&comma;</p>
+
+                <p class="mid_quote" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" data-aos-delay="1000" data-aos-duration="1450">We are proud and excited to be kicking off the 2022-2023 school year on a series of high notes as we celebrate <em>accomplishments</em>&comma; <em>milestones</em>&comma; and <em>successes&period;</em> </p>
+
+                <img class="dash" src="{% static 'img/dash.svg' %}" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1400" data-aos-duration="1200">
+
+                <p class="pres_title" data-aos="fade-zoom-in" data-aos-anchor-placement="center-bottom" data-aos-easing="linear" data-aos-delay="1800" data-aos-duration="1850"> From Our Founder</p>
+
+                <h4 class="pres_name" data-aos="fade-zoom-in" data-aos-anchor-placement="center-bottom" data-aos-easing="linear" data-aos-delay="1900" data-aos-duration="1900">Kenneth Byalin&comma; PhD&period; </h4>
+
+                <button type="button" class="read_more" id="presBtn" data-aos="fade-zoom-in" data-aos-anchor-placement="center-bottom" data-aos-easing="linear" data-aos-delay="600">Read More</button>
+
+            </div>
+
+            <div class="recent_news">
+                <h5 class="news_title"> <span class="h5_1">Recent</span> <span class="h5_2">News</span></h5>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">Richmond Prep Groundbreaking Gallery</button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Integration Charter Schools (ICS) held a groundbreaking ceremony on Dec. 15 for the new location of Richmond Preparatory
+                                Charter School at 2245 Richmond Avenue, site of a former Barnes & Noble store. The school offers small classes with a
+                                college preparatory curriculum and an inclusive environment that is welcoming of all students, including those living
+                                &lsqb;&period;&period;&period;&rsqb; <a href="https://integrationcharterschools.org/news/richmond-prep-groundbreaking-gallery/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Richmond Prep Breaks Ground On New Building!
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                With a focus on the future and a mission to offer unparallelededucational opportunities on Staten Island, Integration
+                                Charter Schools (ICS) held agroundbreaking ceremony on Dec. 15 for the new location of Richmond Preparatory Charter
+                                School at 2245 Richmond Avenue, site of a former Barnes & Noble store. The new location, which will open for classes &lsqb;&period;&period;&period;&rsqb; <a href="https://integrationcharterschools.org/news/richmond-prep-breaks-ground-on-new-building/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Lavelle Prep High School Hosts Annual Friendsgiving Feast
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                In anticipation for the holiday season, Lavelle Prep hosted our annual Friendsgiving feast for the high school students
+                                last Friday. The afternoon began with a delicious lunch prepared by our very own teachers and staff in celebration of
+                                our Lavelle family. Much of our food was graciously donated by community partners, including Stop and Shop, &lsqb;&period;&period;&period;&rsqb;
+ <a href="https://integrationcharterschools.org/news/lavelle-prep-high-school-hosts-annual-friendsgiving-feast/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Begin Again 
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Bernie always wanted us to begin again from scratch. That has become an important principle in my practice.
+                                Problem-solving best begins with a fresh canvas. We constantly begin again. Every year, our schools begin again, even
+                                when it seems unnecessary. There are new members of every team every year, new ingredients in the mix. We &lsqb;&period;&period;&period;&rsqb; <a href="https://integrationcharterschools.org/news/begin-again/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Integration Charter Schools at Black Heritage Family Day
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                In honor of African Heritage Month, Integration Charter Schools joined the Staten Island community this past Saturday in
+                                celebrating culture&comma;
+                                raising awareness, and promoting racial unity at our city&apos;s annual Black &lsqb;&period;&period;&period;&rsqb; <a href="https://integrationcharterschools.org/news/nicotra-students-begin-classes-at-st-johns-university/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Nicotra Students Begin Classes at St&period; John&apos;s University
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                In its fourth year of operation, Nicotra Early College Charter School is proud to announce that this semester&comma; 27
+                                students have begun their studies on the St&period; John&apos;s University Staten &lsqb;&period;&period;&period;&rsqb; <a href="https://integrationcharterschools.org/news/vision/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Vision                            
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                The Buddha tells the story in the Lotus Sutra of the spiritual seekers setting out in search of what? Enlightenment?
+                                Their guide points and far in the distance they catch &lsqb;&period;&period;&period;&rsqb; <a href="https://integrationcharterschools.org/news/vision/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                New Ventures Charter School Counseling Team Speaks Out On Suicide Prevention
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                For the New Ventures and Integration Charter Schools family&comma;
+                                “see something&comma;
+                                say something” has taken on an entirely new
+                                meaning&period; With the spread of the COVID-19 virus&comma;
+                                there has been an emphasis on the importance of physical health within
+                                our country in the past year&period; However&comma;
+                                as the pandemic continues&comma;
+                                there is a critical need &lsqb;&period;&period;&period;&rsqb; <a href="https://integrationcharterschools.org/news/new-ventures-charter-school-counseling-team-speaks-out-on-suicide-prevention/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    <footer>
+        <div id="address">
+            <img class="ics_icon" src="{% static 'img/Logo_img.svg' %}">
+            <h1 class='h1_1'>School </h1> <h1 class='h1_2'>Locations</h1>
+            <ul class="schoolLocation">
+                <li><img src="{% static 'img/building2-icon.svg' %}"><a id="link1" href="https://www.google.com/maps/place/2245+Richmond+Ave,+Staten+Island,+NY+10314/@40.5923055,-74.1646372,871m/data=!3m2!1e3!4b1!4m5!3m4!1s0x89c24c7b2c7e1959:0x85d748ae077287b9!8m2!3d40.5923055!4d-74.1624485">2245 Richmond Ave, Staten Island, NY 10314</a> <p class="locDescription description1">Richmond Prep Charter School</p></li>
+                <li><img src="{% static 'img/building-icon.svg' %}"><a id="link2" href="https://www.google.com/maps/place/40%C2%B036'16.1%22N+74%C2%B010'50.7%22W/@40.60447,-74.1813072,19z/data=!3m1!4b1!4m6!3m5!1s0x0:0xeab0c5b470c06cb9!7e2!8m2!3d40.6044687!4d-74.1807603">1441 South Ave, Staten Island, NY 10314</a> <p class="locDescription description2">Nicotra Early College Charter School - 5th Floor<br>Richmond Prep Charter School - 5th Floor<br>New Ventures Charter
+                School - 4th floor<br>Lavelle Prep Elementary - 3rd Floor</p></li>
+                <li><img src="{% static 'img/school-icon.svg' %}"><a id="link3" href="https://www.google.com/maps/place/1+Teleport+Dr,+Staten+Island,+NY+10314/@40.604886,-74.1792213,218m/data=!3m1!1e3!4m13!1m7!3m6!1s0x89c24c8d5eab3b7f:0xbfbbe6cd7b096e83!2s1+Teleport+Dr,+Staten+Island,+NY+10314!3b1!8m2!3d40.605163!4d-74.1789927!3m4!1s0x89c24cf332bf2a77:0x7918a4ec6c896066!8m2!3d40.6046298!4d-74.178892">1 Teleport Drive, Staten Island, NY 10314</a> <p class="locDescription description3">Lavelle Prep Middle & High School</p>  </li>
+            </ul>
+        </div>
+        <div id="map"></div>
+    </footer>
+    <ul class="copyright">
+        <li>&copy; 2023 Integration Charter Schools. All rights reserved.</li>
+        <li>Design: <a href="#">Junior Delice</a></li>
+    </ul>
+
+    <!--<script src="popper/dist/umd/popper.min.js"></script>-->
+    <script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!--<script src="bootstrap/js/bootstrap.min.js"></script>-->
+
+    <script src="{% static 'aos-master/dist/aos.js'%}"></script>
+    <script src="{% static 'js/index.js'%}"></script>
+    <script>
+
+        AOS.init();
+
+    </script>
+
+</body>
+
+</html>

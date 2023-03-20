@@ -1,0 +1,4276 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    scroll-behavior: smooth;
+}
+
+/*Set font in document to be 'Montserrat'*/
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Makes scrollbar thin*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+/*Removes top and bottom scroll buttons from scrollbar*/
+::-webkit-scrollbar-button {
+    display: none;
+}
+/*Settings for scroll bar thumb*/
+::-webkit-scrollbar-thumb {
+    background: rgba(46, 46, 46, 0.842);
+    width: 6px;
+    border-radius: 25px;
+}
+/*Slightly lightens scrollbar thumb on hover*/
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(104, 104, 104, 0.93);
+}
+/*Setting not working*/
+::-webkit-scrollbar-track {
+    background: rgba(39, 39, 39, 0);
+}
+
+::selection {
+  background: #06a84d;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  border-radius: 8px;
+  border: 0px solid rgba(0, 0, 0, 0.062);
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.623); /* Black*/
+  backdrop-filter: saturate(180%) blur(20px);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.4s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a, .dropdown-btn{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.733);
+  display: block;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+/*Dropdown Settings*/
+a.dropdown-btn {
+    cursor: default;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #059744;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 1.563rem;
+  font-size: 3.5rem;
+  margin-left: 3.125rem;
+  margin-bottom: 00rem;
+  color: rgba(238, 92, 35, 0.925)
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: rgba(10, 10, 10, 0.363);
+  padding-left: 0.5rem;
+  width: 100%;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 0.5rem;
+    color: rgba(255, 255, 255, 0.637);
+    width: 1.875rem;
+    padding-top: 0.625rem;
+}
+/*nav links Settings*/
+nav {
+    order: 1;
+    padding-top: 1.563rem;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+}
+
+.nav_links {
+    list-style-type: none;
+    font-size: 1.563rem;
+}
+/*Sets nav links to be white*/
+.white_link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav_link_1 {
+    display: inline;
+    color: #fff;
+    position: absolute;
+    left: 6.25rem;
+}
+
+.nav_link_2 {
+    display: inline;
+    position: absolute;
+    color: #fff;
+    left: 21.875rem;
+}
+
+.nav_link_3 {
+    display: inline;
+    position: absolute;
+    left: 37.5rem;
+}
+
+.nav_link_4 {
+    display: inline;
+    position: absolute;
+    color: #D69F0B;
+    background-color: rgba(255, 255, 255, 0);
+    border: #D69F0B solid 0.063rem;
+    border-radius: 1.563rem;
+    padding: 0.25rem 1.188rem;
+    right: 21.875rem;
+}
+
+.nav_link_5 {
+    display: inline;
+    position: absolute;
+    right: 11.25rem;
+    color: #fff;
+}
+
+.nav_link_6 {
+    display: flex;
+    position: absolute;
+    right: 6.25rem;
+}
+
+.menu_text {
+    z-index: -11;
+    display: block;
+    left: 95.04rem;
+    position: relative;
+    width: max-content;
+    opacity: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nav_link_1 a:hover {
+    color: #059744;
+}
+
+.nav_link_2 a:hover {
+    color: #059744;
+}
+
+.nav_link_3 a:hover {
+    color: #059744;
+}
+
+.nav_link_4:hover {
+    background: linear-gradient(44deg, #d69f0b, #e4cc8a, #d69f0b);
+    background-size: 600% 600%;
+    color: #fff;
+    border: linear-gradient(44deg, #d69f0b, #e4cc8a, #d69f0b) solid 0.063rem;
+
+    -webkit-animation: buttonShine 4s ease infinite;
+    -moz-animation: buttonShine 4s ease infinite;
+    animation: buttonShine 4s ease infinite;
+    transition: unset;
+}
+
+@-webkit-keyframes buttonShine {
+    0%{background-position:99% 0%}
+    50%{background-position:2% 100%}
+    100%{background-position:99% 0%}
+}
+@-moz-keyframes buttonShine {
+    0%{background-position:99% 0%}
+    50%{background-position:2% 100%}
+    100%{background-position:99% 0%}
+}
+@keyframes buttonShine {
+    0%{background-position:99% 0%}
+    50%{background-position:2% 100%}
+    100%{background-position:99% 0%}
+}
+
+
+.nav_link_6:hover {
+    color: #059744;
+}
+
+.scroll_top {
+    display:none;
+    position: fixed;
+    color:#059744;
+    font-size: 3rem;
+    bottom: 5rem;
+    right: 6.25rem;
+    z-index: 99999;
+}
+
+.scroll_top:hover {
+    color:#EE5E23;
+}
+.scroll_top:active {
+    transform: scale(.9);
+}
+
+.background_video{
+    order: 2;
+    position: relative;
+    display: block;
+    min-height: 62.563rem;
+    height: 60.06rem;
+    width: 100%;
+    /* margin-bottom: -100px; */
+}
+
+.background_video:before {
+    z-index: 1;
+    position: absolute;
+    content: ' ';
+    background-color: rgba(46, 46, 46, 0.795);
+    height: 100%;
+    width: 100%;
+    /* height: 1000px; */
+}
+
+video {
+    max-width: 100%;
+}
+
+#home_text {
+    position: relative;
+    left: 35.661rem;
+    bottom: 43.794rem;
+    width: max-content;
+    z-index: 3;
+    color: #EE5E23;
+    font-size: 2rem;
+    animation: text_appear 8s;
+}
+
+#ics_logo {
+    z-index: 3;
+    display: block;
+    position: relative;
+    left: 42rem;
+    bottom: 50rem;
+    /* right: 500px;
+    left: 680px;
+    bottom: 800px; */
+    height: 40%;
+    animation: logo_appear 2s;
+}
+
+.scroll {
+    position: relative;
+    z-index: 4;
+    top: -34.409rem;
+    left: 51.301rem;
+    animation: scroll_indicator .9s linear infinite alternate-reverse;
+
+}
+.scroll:hover{
+    filter: invert(43%) sepia(100%) saturate(1916%) hue-rotate(347deg) brightness(96%) contrast(94%);
+}
+.scroll:active{
+    transform: scale(.9);
+}
+
+@keyframes logo_appear{
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+@keyframes text_appear {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+@keyframes scroll_indicator {
+    0% {top: -37.538rem;}
+    100% { top: -34.409rem;}
+}
+
+section {
+    order: 3;
+    z-index: 2;
+    position: relative;
+    display: block;
+    background-color: #ffffff;
+    padding-top: 0.625rem;
+    padding-bottom: 1.25rem;
+}
+
+.section1 {
+    margin-bottom: -6.25rem;
+}
+
+.mission_title h5 {
+    position: absolute;
+    padding-top: 1.25rem;
+    top: 12.5rem;
+    left: 3.438rem;
+    bottom: 3.75rem;
+    font-size: 3.75rem;
+    font-weight: bolder;
+}
+
+.underline{
+    position: absolute;
+    top: 18.75rem;
+    left: 3.625rem; 
+}
+
+.blg1 {
+    position: absolute;
+    border-radius: 5.5rem;
+    height: 14%;
+    top: 2.815rem;
+    right: 6.882rem;
+}
+
+.blg2 {
+    position: absolute;
+    border-radius: 5.5rem;
+    height: 14%;
+    right: 5.005rem;
+    top: 33.158rem;
+}
+
+.summary {
+    position: absolute;
+    top: 21.25rem;
+    left: 3.75rem;
+    height: 31.25rem;
+    width: 50%;
+}
+
+.h6_1{
+    font-weight: 600;
+}
+
+.h6_2{
+    font-weight: 600;
+}
+
+.p1{
+    margin-top: 0rem;
+    font-size: 1.875rem;
+    font-weight: 200;
+    line-height: 3.75rem;
+}
+
+.schools{
+    position: relative;
+    background-image: url(/static/img/Student_lavelleprep.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 18.75rem;
+    margin-top: 70.313rem;
+    height: 50rem;
+}
+
+.schools:before{
+    position: absolute;
+    content: ' ';
+    background-color: rgba(56, 53, 53, 0.795);
+    height: 50rem;
+    width: 100%;
+}
+
+.schools_title{
+    text-align: center;
+    position: relative;
+    top: 6.25rem;
+    font-size: 3.75rem;
+    color: white;
+}
+
+.h5_1{
+    color: #059744;
+    font-weight: 600;
+}
+.h5_2{
+    color:#ee5e23;
+    font-weight: 600;
+}
+
+
+.school_img{
+    display: grid;
+    grid-template-columns: 3.75rem 3.75rem 3.75rem 3.75rem;
+    grid-row: 3.75rem;
+    column-gap: 60%;
+    position: relative;
+    z-index: 8;
+    width: 32.4rem;
+    left: 12.96rem;
+    top: 18.769rem;
+    list-style-type: none;
+}
+
+.lav_icon{
+    width: 350%;
+    margin-right: 12.5rem;
+    transition: ease-in-out .5s;
+}
+
+.lav_icon:hover {
+    transform: scale(1.3);
+    transition: ease-in-out .5s;
+}
+
+.nv_icon{
+    width: 395%;
+    margin-right: 12.5rem;
+    transition: ease-in-out .5s;
+}
+
+.nv_icon:hover {
+    transform: scale(1.3);
+    transition: ease-in-out .5s;
+}
+
+.nic_icon{
+    width: 350%;
+    margin-right: 12.5rem;
+    transition: ease-in-out .5s;
+}
+
+.nic_icon:hover {
+    transform: scale(1.3);
+    transition: ease-in-out .5s;
+}
+
+.rich_icon{
+    width: 350%;
+    margin-right: 12.5rem;
+    transition: ease-in-out .5s;
+}
+
+.rich_icon:hover {
+    transform: scale(1.3);
+    transition: ease-in-out .5s;
+}
+
+.pres_section{
+    background-color: #adb5bd;
+    height: 50rem;
+}
+
+.pres_img{
+    width: 35%;
+    border-radius: 6.313rem;
+    margin: 6.25rem;
+}
+
+.quotes {
+    position: relative;
+    bottom: 15.625rem;
+}
+
+
+.top_quote{
+    position: relative;
+    bottom: 40rem;
+    left: 62.5rem;
+    font-size: 2.813rem;
+    font-weight: bolder;
+    width: 40%;
+}
+
+.mid_quote{
+    position: relative;
+    bottom: 38.75rem;
+    left: 62.5rem;
+    font-size: 1.563rem;
+    width: 40%;
+    line-height: 2.625rem;
+}
+
+.dash {
+    position: absolute;
+    top: 148.75rem;
+    left: 57.5rem;
+
+}
+
+.pres_title{
+    position: absolute;
+    top: 148.125rem;
+    left: 63.125rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.pres_name{
+    position: absolute;
+    top: 150.625rem;
+    left: 64.688rem;
+    font-size: 2.188rem;
+    font-style: italic;
+}
+
+.read_more {
+    position: absolute;
+    top: 154.375rem;
+    left: 68.75rem;
+    padding: 0.313rem 2.188rem;
+    border-radius: 1.25rem;
+    background-color: #17D12F;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 200;
+}
+
+.read_more:hover {
+    color: #000;
+    background-color: #fff;
+    border: 0.063rem solid #17D12F;
+}
+
+.read_more:active {
+    background-color: #17D12F;
+}
+
+.recent_news {
+    height: auto;
+}
+
+.news_title{
+    text-align: center;
+    margin: 2.5rem 0rem;
+    font-size: 3.75rem;
+}
+
+.accordion-item{
+    width: 50%;
+    margin: auto;
+}
+
+footer {
+    order: 4;
+    position: relative;
+    height: 37.5rem;
+    /*background-color: #343A40;*/
+    background: linear-gradient( 130deg, #585858, #262727, #606161);
+    background-size: 600% 600%;
+    /*animation: Grad_BG 15s ease infinite;
+    -webkit-animation: Grad_BG 15s ease infinite;
+    -moz-animation: Grad_BG 15s ease infinite;*/
+}
+/*
+@-webkit-keyframes Grad_BG {
+    0% { background-position: 0% 10% }
+    50% { background-position: 100% 91% }
+    100% { background-position: 0% 10% }
+}
+
+@-moz-keyframes Grad_BG {
+    0% { background-position: 0% 10% }
+    50% { background-position: 100% 91% }
+    100% { background-position: 0% 10% }
+}
+
+@keyframes Grad_BG {
+    0% { background-position: 0% 10% }
+    50% { background-position: 100% 91% }
+    100% { background-position: 0% 10% }
+}
+*/
+
+#address{
+    float: left;
+}
+
+#map {
+    height: 80%;
+    width: 30%;
+    float: right;
+    margin: 3.75rem 12.5rem 0rem 3.125rem;
+    border-radius: 0.625rem;
+}
+
+.ics_icon{
+    position: absolute;
+    top: 2.5rem;
+    left: 6.25rem;
+    width: 6.25rem;
+}
+
+.h1_1{
+    color: #059744;
+    font-weight: 600;
+    display: inline;
+    font-size: 4.375rem;
+    margin-top: 1.563rem;
+    position: absolute;
+    left: 15rem;
+    top: 1.25rem;
+}
+
+.h1_2{
+    color:#ee5e23;
+    font-weight: 600;
+    display: inline;
+    font-size: 4.375rem;
+    margin-top: 1.563rem;
+    position: absolute;
+    left: 31.563rem;
+    top: 1.25rem;
+}
+
+.schoolLocation{
+    display: inline-block;
+    position: absolute;
+    bottom: 3.125rem;
+    left: 12.5rem;
+}
+
+.schoolLocation img{
+    width:10%;
+    margin-left: 0.625rem;
+}
+.schoolLocation li{
+    list-style-type: none;
+    font-size: 1.563rem;
+    margin-bottom: 1.875rem;
+}
+.schoolLocation li a{
+    list-style-type: none;
+    font-size: 1.563rem;
+    text-decoration: none;
+    color:#fff;
+    margin-left: 1.875rem;
+}
+
+.schoolLocation li a:hover {
+    color: #059744;
+}
+
+.copyright {
+    order: 4;
+    text-align: center;
+    padding: 0.938rem;
+    list-style-type: none;
+    margin-bottom: 0rem;
+    font-weight: 400;
+    background: linear-gradient(270deg, #ee5e23, #059744);
+    background-size: 400% 400%;
+    -webkit-animation: copyright 30s ease infinite;
+    -moz-animation: copyright 30s ease infinite;
+    animation: copyright 30s ease infinite;
+}
+
+.copyright li a {
+    text-decoration: none;
+    color: rgb(37, 0, 248);
+}
+.copyright li a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+@-webkit-keyframes copyright {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes copyright {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes copyright {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.locDescription {
+    display: none;
+    position: absolute;
+    left: 15.625rem;
+    font-size: 1.5rem;
+    background-color: rgba(150, 150, 150, 0.295);
+    padding: 1.25rem;
+    border-radius: 1.563rem;
+    border: 0.063rem solid rgba(0, 0, 0, 0.062);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.description1 {
+    bottom: 11.875rem;
+}
+
+.description2 {
+    bottom: -1.875rem;
+}
+.description3 {
+    bottom: -2.188rem;
+}
+
+.nav_link_4:active {
+    transform: scale(.9);
+}
+
+/* @media screen and (max-width: 1730px){
+    .background_video{
+        height: 100vh;
+    }
+
+    .background_video:before{
+        height: 97vh;
+    }
+
+    video {
+        height: 110vh;
+    } 
+
+    .menu_text {
+        left: 84vw;
+    }
+
+    .scroll {
+        left: 48vw;
+    }
+
+    #home_text {
+        left: 34vw;
+    }
+
+    .mission_title h5 {
+        top: 120px;
+    }
+
+    .underline{
+        position: absolute;
+        top: 210px;
+        left: 58px; 
+    }
+
+
+    .p1 {
+        margin-top: -100px;
+        padding: 10px;
+        border-radius: 10px;
+         background-color: #c7c7c775; 
+        width: 48vw;
+    }
+
+    .blg1 {
+        top: 45px;
+        right: 5vw;
+    }
+
+    .top_quote {
+        left: 54vw;
+        bottom: 61vh;
+    }
+
+    .mid_quote {
+        left: 54vw;
+        bottom: 61vh;
+        width: 35vw;
+    }
+
+} */
+
+@media screen and (min-width: 1720px) {
+
+    .background_video {
+        height: 68.563rem;
+    }
+
+    .background_video:before {
+        height: 67.4rem;
+    }
+
+    .menu_text {
+        left: 52.553rem;
+    }
+
+    .scroll {
+        top: -34.409rem;
+        left: 55.5rem;
+    }
+
+    #ics_logo {
+        left: 42rem;
+        bottom: 45rem;
+    }
+
+    #home_text {
+        left: 39.56rem;
+    }
+
+    .school_img {
+        display: grid;
+        grid-template-columns: 3.75rem 3.75rem 3.75rem 3.75rem;
+        grid-row: 3.75rem;
+        column-gap: 60%;
+        position: relative;
+        z-index: 8;
+        width: 32.4rem;
+        left: 18.96rem;
+        top: 18.769rem;
+        list-style-type: none;
+    }
+
+    .mission_title h5 {
+        top: 7.5rem;
+    }
+
+    .underline {
+        position: absolute;
+        top: 13.125rem;
+        left: 3.625rem;
+    }
+
+
+    .p1 {
+        margin-top: -7.5rem;
+        margin-left: -0.625rem;
+        padding: 0.625rem;
+        border-radius: 0.625rem;
+        /* background-color: #c7c7c775; */
+        width: 51.84rem;
+    }
+
+    .blg1 {
+        top: 2.813rem;
+        right: 5.4rem;
+        width: 43.2rem;
+        height: 28.153rem;
+    }
+
+    .blg2 {
+        width: 43.2rem;
+        height: 28.153rem;
+        right: 9.72rem;
+    }
+
+    .top_quote {
+        left: 58.32rem;
+        bottom: 38.163rem;
+    }
+
+    
+    .mid_quote {
+        left: 58.32rem;
+        bottom: 38.163rem;
+        width: 37.8rem;
+    }
+
+    .dash {
+        position: absolute;
+        top: 152.75rem;
+        left: 57.5rem;
+    }
+
+    .pres_title {
+        position: absolute;
+        top: 152.125rem;
+        left: 63.125rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .pres_name {
+        position: absolute;
+        top: 154.625rem;
+        left: 64.688rem;
+        font-size: 2.188rem;
+        font-style: italic;
+    }
+
+    .read_more {
+        position: absolute;
+        top: 158.375rem;
+        left: 68.75rem;
+        padding: 0.313rem 2.188rem;
+        border-radius: 1.25rem;
+        background-color: #17D12F;
+        color: #fff;
+        font-size: 1.125rem;
+        font-weight: 200;
+    }
+    
+    .summary {
+        position: absolute;
+        top: 21.25rem;
+        left: 3.75rem;
+        height: 31.25rem;
+        width: 50%;
+    }
+
+    .description2 {
+        right: 1.875rem;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        scroll-behavior: smooth;
+    }
+
+    /*Set font in document to be 'Montserrat'*/
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*Makes scrollbar thin*/
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /*Removes top and bottom scroll buttons from scrollbar*/
+    ::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    /*Settings for scroll bar thumb*/
+    ::-webkit-scrollbar-thumb {
+        background: rgba(46, 46, 46, 0.842);
+        width: 6px;
+        border-radius: 25px;
+    }
+
+    /*Slightly lightens scrollbar thumb on hover*/
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(104, 104, 104, 0.93);
+    }
+
+    /*Setting not working*/
+    ::-webkit-scrollbar-track {
+        background: rgba(39, 39, 39, 0);
+    }
+
+    ::selection {
+        background: #06a84d;
+    }
+
+    /* The side navigation menu */
+    .sidenav {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        border-radius: 8px;
+        border: 0px solid rgba(0, 0, 0, 0.062);
+        position: fixed;
+        /* Stay in place */
+        z-index: 4;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.623);
+        /* Black*/
+        backdrop-filter: saturate(180%) blur(20px);
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.4s;
+        /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    /* The navigation menu links */
+    .sidenav a,
+    .dropdown-btn {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: rgba(255, 255, 255, 0.733);
+        display: block;
+        transition: 0.3s;
+        opacity: 1;
+    }
+
+    /*Dropdown Settings*/
+    a.dropdown-btn {
+        cursor: default;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover,
+    .dropdown-btn:hover {
+        color: #059744;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 1.563rem;
+        font-size: 3.5rem;
+        margin-left: 3.125rem;
+        margin-bottom: 00rem;
+        color: rgba(238, 92, 35, 0.925)
+    }
+
+    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+    .dropdown-container {
+        display: none;
+        background-color: rgba(10, 10, 10, 0.363);
+        padding-left: 0.5rem;
+        width: 100%;
+    }
+
+    /* Optional: Style the caret down icon */
+    .fa-caret-down {
+        float: right;
+        padding-right: 0.5rem;
+        color: rgba(255, 255, 255, 0.637);
+        width: 1.875rem;
+        padding-top: 0.625rem;
+    }
+
+    /*nav links Settings*/
+    nav {
+        order: 1;
+        padding-top: 1.563rem;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+
+    .nav_links {
+        list-style-type: none;
+        font-size: 1.563rem;
+    }
+
+    /*Sets nav links to be white*/
+    .white_link {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .nav_link_1 {
+        display: none;
+        color: #fff;
+        position: absolute;
+        left: 5.25rem;
+        font-size: 1.2rem;
+    }
+
+    .nav_link_2 {
+        display: none;
+        position: absolute;
+        color: #fff;
+        left: 21.875rem;
+        font-size: 1.2rem;
+    }
+
+    .nav_link_3 {
+        display: none;
+        position: absolute;
+        left: 37.5rem;
+        font-size: 1.2rem;
+    }
+
+    .nav_link_4 {
+        display: inline;
+        position: absolute;
+        color: #D69F0B;
+        background-color: rgba(255, 255, 255, 0);
+        border: #D69F0B solid 0.063rem;
+        border-radius: 1.563rem;
+        padding: 0.25rem 1.188rem;
+        right: 21.875rem;
+    }
+
+    .nav_link_5 {
+        display: inline;
+        position: absolute;
+        right: 11.25rem;
+        color: #fff;
+    }
+
+    .nav_link_6 {
+        display: flex;
+        position: absolute;
+        right: 6.25rem;
+    }
+
+    .menu_text {
+        z-index: -11;
+        display: block;
+        left: 95.04rem;
+        position: relative;
+        width: max-content;
+        opacity: 0;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .nav_link_1 a:hover {
+        color: #059744;
+    }
+
+    .nav_link_2 a:hover {
+        color: #059744;
+    }
+
+    .nav_link_3 a:hover {
+        color: #059744;
+    }
+
+    .nav_link_4:hover {
+        background: linear-gradient(44deg, #d69f0b, #e4cc8a, #d69f0b);
+        background-size: 600% 600%;
+        color: #fff;
+        border: linear-gradient(44deg, #d69f0b, #e4cc8a, #d69f0b) solid 0.063rem;
+
+        -webkit-animation: buttonShine 4s ease infinite;
+        -moz-animation: buttonShine 4s ease infinite;
+        animation: buttonShine 4s ease infinite;
+        transition: unset;
+    }
+
+    @-webkit-keyframes buttonShine {
+        0% {
+            background-position: 99% 0%
+        }
+
+        50% {
+            background-position: 2% 100%
+        }
+
+        100% {
+            background-position: 99% 0%
+        }
+    }
+
+    @-moz-keyframes buttonShine {
+        0% {
+            background-position: 99% 0%
+        }
+
+        50% {
+            background-position: 2% 100%
+        }
+
+        100% {
+            background-position: 99% 0%
+        }
+    }
+
+    @keyframes buttonShine {
+        0% {
+            background-position: 99% 0%
+        }
+
+        50% {
+            background-position: 2% 100%
+        }
+
+        100% {
+            background-position: 99% 0%
+        }
+    }
+
+
+    .nav_link_6:hover {
+        color: #059744;
+    }
+
+    .scroll_top {
+        display: none;
+        position: fixed;
+        color: #059744;
+        font-size: 3rem;
+        bottom: 5rem;
+        right: 6.25rem;
+        z-index: 99999;
+    }
+
+    .scroll_top:hover {
+        color: #EE5E23;
+    }
+
+    .scroll_top:active {
+        transform: scale(.9);
+    }
+
+    .background_video {
+        order: 2;
+        position: relative;
+        display: block;
+        min-height: 62.563rem;
+        height: 60.06rem;
+        width: 100%;
+        /* margin-bottom: -100px; */
+    }
+
+    .background_video:before {
+        z-index: 1;
+        position: absolute;
+        content: ' ';
+        background-color: rgba(46, 46, 46, 0.795);
+        height: 100%;
+        width: 100%;
+        /* height: 1000px; */
+    }
+
+    video {
+        max-width: 100%;
+        height: 63rem;
+        object-fit: cover;
+    }
+
+    #home_text {
+        position: relative;
+        left: 16.661rem;
+        bottom: 47.794rem;
+        width: max-content;
+        z-index: 3;
+        color: #EE5E23;
+        font-size: 2rem;
+        animation: text_appear 8s;
+    }
+
+    #ics_logo {
+        z-index: 3;
+        display: block;
+        position: relative;
+        left: 23rem;
+        bottom: 49rem;
+        height: 40%;
+        animation: logo_appear 2s;
+    }
+
+    .scroll {
+        display: none;
+        position: relative;
+        z-index: 4;
+        top: -34.409rem;
+        left: 51.301rem;
+        animation: scroll_indicator .9s linear infinite alternate-reverse;
+
+    }
+
+    .scroll:hover {
+        filter: invert(43%) sepia(100%) saturate(1916%) hue-rotate(347deg) brightness(96%) contrast(94%);
+    }
+
+    .scroll:active {
+        transform: scale(.9);
+    }
+
+    @keyframes logo_appear {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 100;
+        }
+    }
+
+    @keyframes text_appear {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 100;
+        }
+    }
+
+    @keyframes scroll_indicator {
+        0% {
+            top: -37.538rem;
+        }
+
+        100% {
+            top: -34.409rem;
+        }
+    }
+
+    section {
+        order: 3;
+        z-index: 2;
+        position: relative;
+        display: block;
+        background-color: #ffffff;
+        padding-top: 0.625rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .section1 {
+        margin-bottom: -6.25rem;
+    }
+
+    .mission_title h5 {
+        position: absolute;
+        padding-top: 1.25rem;
+        top: 12.5rem;
+        left: 3.438rem;
+        bottom: 3.75rem;
+        font-size: 3.75rem;
+        font-weight: bolder;
+    }
+
+    .underline {
+        position: absolute;
+        top: 18.75rem;
+        left: 3.625rem;
+    }
+
+    .blg1 {
+        position: absolute;
+        border-radius: 5.5rem;
+        height: 12%;
+        width: 45%;
+        top: 7.8149999999999995rem;
+        left: 36.882rem;
+    }
+
+    .blg2 {
+        position: absolute;
+        border-radius: 5.5rem;
+        height: 12%;
+        width: 43%;
+        right: 4.005rem;
+        top: 36.158rem;
+    }
+
+    .summary {
+        position: absolute;
+        top: 21.25rem;
+        left: 3.75rem;
+        height: min-content;
+        width: 42%;
+    }
+
+    .h6_1 {
+        font-weight: 600;
+    }
+
+    .h6_2 {
+        font-weight: 600;
+    }
+
+    .p1 {
+        margin-top: 0rem;
+        font-size: 1.3rem;
+        font-weight: 200;
+        line-height: 2.75rem;
+    }
+
+    .schools {
+        position: relative;
+        background-image: url(/static/img/Student_lavelleprep.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 18.75rem;
+        margin-top: 70.313rem;
+        height: 50rem;
+    }
+
+    .schools:before {
+        position: absolute;
+        content: ' ';
+        background-color: rgba(56, 53, 53, 0.795);
+        height: 50rem;
+        width: 100%;
+    }
+
+    .schools_title {
+        position: relative;
+        top: 7.25rem;
+        right: auto;
+        font-size: 3.75rem;
+        color: white;
+    }
+
+    .h5_1 {
+        color: #059744;
+        font-weight: 600;
+    }
+
+    .h5_2 {
+        color: #ee5e23;
+        font-weight: 600;
+    }
+
+
+    .school_img {
+        display: grid;
+        direction: unset;
+        text-overflow: unset;
+        overflow: unset;
+        grid-template-columns: auto auto auto auto;
+        grid-row: 3.75rem;
+        row-gap: 10%;
+        column-gap: 12%;
+        position: relative;
+        z-index: 8;
+        width: 100%;
+        left: 0;
+        right: auto;
+        top: 17.769rem;
+        list-style-type: none;
+    }
+
+    .lav_icon {
+        width: 100%;
+        display: block;
+        margin-right: 0;
+        transition: ease-in-out .5s;
+    }
+
+    .lav_icon:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .5s;
+    }
+
+    .nv_icon {
+        width: 100%;
+        margin-right: 0;
+        transition: ease-in-out .5s;
+    }
+
+    .nv_icon:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .5s;
+    }
+
+    .nic_icon {
+        width: 100%;
+        margin-right: 0;
+        transition: ease-in-out .5s;
+    }
+
+    .nic_icon:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .5s;
+    }
+
+    .rich_icon {
+        width: 100%;
+        margin-right: 0;
+        transition: ease-in-out .5s;
+    }
+
+    .rich_icon:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .5s;
+    }
+
+    .pres_section {
+        background-color: #adb5bd;
+        height: 50rem;
+    }
+
+    .pres_img {
+        display: unset;
+        position: relative;
+        width: 35%;
+        height: 50%;
+        top: 21rem;
+        left: 2rem;
+        border-radius: 6.313rem;
+        margin: 0;
+    }
+
+    .quotes {
+        position: relative;
+        bottom: 5.625rem;
+        left: 2rem;
+    }
+
+    .top_quote {
+        position: relative;
+        bottom: 15rem;
+        left: 34.5rem;
+        font-size: 2.813rem;
+        font-weight: bolder;
+        width: 50%;
+    }
+
+    .mid_quote {
+        position: relative;
+        bottom: 13.75rem;
+        left: 34.5rem;
+        font-size: 1.563rem;
+        width: 50%;
+        line-height: 2.625rem;
+    }
+
+    .dash {
+        position: absolute;
+        top: 150.75rem;
+        left: 33.5rem;
+    }
+
+    .pres_title {
+        position: absolute;
+        top: 150.125rem;
+        left: 39.125rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .pres_name {
+        position: absolute;
+        top: 152.625rem;
+        left: 37.688rem;
+        font-size: 2.188rem;
+        font-style: italic;
+    }
+
+    .read_more {
+        position: absolute;
+        top: 157.375rem;
+        left: 39.75rem;
+        padding: 0.313rem 2.188rem;
+        border-radius: 1.25rem;
+        background-color: #17D12F;
+        color: #fff;
+        font-size: 1.125rem;
+        font-weight: 200;
+    }
+
+    .read_more:hover {
+        color: #000;
+        background-color: #fff;
+        border: 0.063rem solid #17D12F;
+    }
+
+    .read_more:active {
+        background-color: #17D12F;
+    }
+
+    .recent_news {
+        height: auto;
+    }
+
+    .news_title {
+        text-align: center;
+        margin: 2.5rem 0rem;
+        font-size: 3.75rem;
+    }
+
+    .accordion-item {
+        width: 80%;
+        margin: auto;
+    }
+
+    footer {
+        order: 4;
+        position: relative;
+        height: 37.5rem;
+        /*background-color: #343A40;*/
+        background: linear-gradient(130deg, #585858, #262727, #606161);
+        background-size: 600% 600%;
+        /*animation: Grad_BG 15s ease infinite;
+            -webkit-animation: Grad_BG 15s ease infinite;
+            -moz-animation: Grad_BG 15s ease infinite;*/
+    }
+
+    /*
+        @-webkit-keyframes Grad_BG {
+            0% { background-position: 0% 10% }
+            50% { background-position: 100% 91% }
+            100% { background-position: 0% 10% }
+        }
+        
+        @-moz-keyframes Grad_BG {
+            0% { background-position: 0% 10% }
+            50% { background-position: 100% 91% }
+            100% { background-position: 0% 10% }
+        }
+        
+        @keyframes Grad_BG {
+            0% { background-position: 0% 10% }
+            50% { background-position: 100% 91% }
+            100% { background-position: 0% 10% }
+        }
+        */
+
+    #address {
+        float: left;
+    }
+
+    #map {
+        height: 70%;
+        width: 45%;
+        float: right;
+        top: 10rem;
+        left: -1rem;
+        margin: 0;
+        border-radius: 0.625rem;
+    }
+
+    .ics_icon {
+        position: absolute;
+        top: 2.5rem;
+        left: 6.25rem;
+        width: 6.25rem;
+    }
+
+    .h1_1 {
+        color: #059744;
+        font-weight: 400;
+        display: inline;
+        font-size: 4.375rem;
+        margin-top: 1.563rem;
+        position: absolute;
+        left: 15rem;
+        top: 1.25rem;
+    }
+
+    .h1_2 {
+        color: #ee5e23;
+        font-weight: 400;
+        display: inline;
+        font-size: 4.375rem;
+        margin-top: 1.563rem;
+        position: absolute;
+        left: 31.563rem;
+        top: 1.25rem;
+    }
+
+    .schoolLocation {
+        display: inline-block;
+        position: absolute;
+        bottom: 3.125rem;
+        width: 45%;
+        left: 1.5rem;
+    }
+
+    .schoolLocation img {
+        width: 10%;
+        margin-left: 0.625rem;
+    }
+
+    .schoolLocation li {
+        list-style-type: none;
+        font-size: 1.563rem;
+        margin-bottom: 1.875rem;
+    }
+
+    .schoolLocation li a {
+        list-style-type: none;
+        font-size: 1.563rem;
+        text-decoration: none;
+        color: #fff;
+        margin-left: 1.875rem;
+    }
+
+    .schoolLocation li a:hover {
+        color: #059744;
+    }
+
+    .copyright {
+        order: 4;
+        text-align: center;
+        padding: 0.938rem;
+        list-style-type: none;
+        margin-bottom: 0rem;
+        font-weight: 400;
+        background: linear-gradient(270deg, #ee5e23, #059744);
+        background-size: 400% 400%;
+        -webkit-animation: copyright 30s ease infinite;
+        -moz-animation: copyright 30s ease infinite;
+        animation: copyright 30s ease infinite;
+    }
+
+    .copyright li a {
+        text-decoration: none;
+        color: rgb(37, 0, 248);
+    }
+
+    .copyright li a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    @-webkit-keyframes copyright {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @-moz-keyframes copyright {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes copyright {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    .locDescription {
+        display: none;
+        position: absolute;
+        left: 15.625rem;
+        font-size: 1.5rem;
+        background-color: rgba(150, 150, 150, 0.295);
+        padding: 1.25rem;
+        border-radius: 1.563rem;
+        border: 0.063rem solid rgba(0, 0, 0, 0.062);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .description1 {
+        bottom: 11.875rem;
+    }
+
+    .description2 {
+        bottom: -1.875rem;
+    }
+
+    .description3 {
+        bottom: -2.188rem;
+    }
+
+    .nav_link_4:active {
+        transform: scale(.9);
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and dowm) */
+@media only screen and (max-width: 992px) {
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        scroll-behavior: smooth;
+    }
+
+    /*Set font in document to be 'Montserrat'*/
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*Makes scrollbar thin*/
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /*Removes top and bottom scroll buttons from scrollbar*/
+    ::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    /*Settings for scroll bar thumb*/
+    ::-webkit-scrollbar-thumb {
+        background: rgba(46, 46, 46, 0.842);
+        width: 6px;
+        border-radius: 25px;
+    }
+
+    /*Slightly lightens scrollbar thumb on hover*/
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(104, 104, 104, 0.93);
+    }
+
+    /*Setting not working*/
+    ::-webkit-scrollbar-track {
+        background: rgba(39, 39, 39, 0);
+    }
+
+    ::selection {
+        background: #06a84d;
+    }
+
+    /* The side navigation menu */
+    .sidenav {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        border-radius: 8px;
+        border: 0px solid rgba(0, 0, 0, 0.062);
+        position: fixed;
+        /* Stay in place */
+        z-index: 4;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.623);
+        /* Black*/
+        backdrop-filter: saturate(180%) blur(20px);
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.4s;
+        /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    /* The navigation menu links */
+    .sidenav a,
+    .dropdown-btn {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: rgba(255, 255, 255, 0.733);
+        display: block;
+        transition: 0.3s;
+        opacity: 1;
+    }
+
+    /*Dropdown Settings*/
+    a.dropdown-btn {
+        cursor: default;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover,
+    .dropdown-btn:hover {
+        color: #059744;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 1.563rem;
+        font-size: 3.5rem;
+        margin-left: 3.125rem;
+        margin-bottom: 00rem;
+        color: rgba(238, 92, 35, 0.925)
+    }
+
+    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+    .dropdown-container {
+        display: none;
+        background-color: rgba(10, 10, 10, 0.363);
+        padding-left: 0.5rem;
+        width: 100%;
+    }
+
+    /* Optional: Style the caret down icon */
+    .fa-caret-down {
+        float: right;
+        padding-right: 0.5rem;
+        color: rgba(255, 255, 255, 0.637);
+        width: 1.875rem;
+        padding-top: 0.625rem;
+    }
+
+    /*nav links Settings*/
+    nav {
+        order: 1;
+        padding-top: 1.563rem;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+
+    .nav_links {
+        list-style-type: none;
+        font-size: 1.563rem;
+    }
+
+    /*Sets nav links to be white*/
+    .white_link {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .nav_link_1 {
+        display: none;
+        color: #fff;
+        position: absolute;
+        left: 5.25rem;
+        font-size: 1.2rem;
+    }
+
+    .nav_link_2 {
+        display: none;
+        position: absolute;
+        color: #fff;
+        left: 21.875rem;
+        font-size: 1.2rem;
+    }
+
+    .nav_link_3 {
+        display: none;
+        position: absolute;
+        left: 37.5rem;
+        font-size: 1.2rem;
+    }
+
+    .nav_link_4 {
+        display: inline;
+        position: absolute;
+        color: #D69F0B;
+        background-color: rgba(255, 255, 255, 0);
+        border: #D69F0B solid 0.063rem;
+        border-radius: 1.563rem;
+        padding: 0.25rem 1.188rem;
+        right: 21.875rem;
+    }
+
+    .nav_link_5 {
+        display: inline;
+        position: absolute;
+        right: 11.25rem;
+        color: #fff;
+    }
+
+    .nav_link_6 {
+        display: flex;
+        position: absolute;
+        right: 6.25rem;
+    }
+
+    .menu_text {
+        z-index: -11;
+        display: block;
+        left: 95.04rem;
+        position: relative;
+        width: max-content;
+        opacity: 0;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .nav_link_1 a:hover {
+        color: #059744;
+    }
+
+    .nav_link_2 a:hover {
+        color: #059744;
+    }
+
+    .nav_link_3 a:hover {
+        color: #059744;
+    }
+
+    .nav_link_4:hover {
+        background: linear-gradient(44deg, #d69f0b, #e4cc8a, #d69f0b);
+        background-size: 600% 600%;
+        color: #fff;
+        border: linear-gradient(44deg, #d69f0b, #e4cc8a, #d69f0b) solid 0.063rem;
+
+        -webkit-animation: buttonShine 4s ease infinite;
+        -moz-animation: buttonShine 4s ease infinite;
+        animation: buttonShine 4s ease infinite;
+        transition: unset;
+    }
+
+    @-webkit-keyframes buttonShine {
+        0% {
+            background-position: 99% 0%
+        }
+
+        50% {
+            background-position: 2% 100%
+        }
+
+        100% {
+            background-position: 99% 0%
+        }
+    }
+
+    @-moz-keyframes buttonShine {
+        0% {
+            background-position: 99% 0%
+        }
+
+        50% {
+            background-position: 2% 100%
+        }
+
+        100% {
+            background-position: 99% 0%
+        }
+    }
+
+    @keyframes buttonShine {
+        0% {
+            background-position: 99% 0%
+        }
+
+        50% {
+            background-position: 2% 100%
+        }
+
+        100% {
+            background-position: 99% 0%
+        }
+    }
+
+
+    .nav_link_6:hover {
+        color: #059744;
+    }
+
+    .scroll_top {
+        display: none;
+        position: fixed;
+        color: #059744;
+        font-size: 3rem;
+        bottom: 5rem;
+        right: 6.25rem;
+        z-index: 99999;
+    }
+
+    .scroll_top:hover {
+        color: #EE5E23;
+    }
+
+    .scroll_top:active {
+        transform: scale(.9);
+    }
+
+    .background_video {
+        order: 2;
+        position: relative;
+        display: block;
+        min-height: 62.563rem;
+        height: 60.06rem;
+        width: 100%;
+        /* margin-bottom: -100px; */
+    }
+
+    .background_video:before {
+        z-index: 1;
+        position: absolute;
+        content: ' ';
+        background-color: rgba(46, 46, 46, 0.795);
+        height: 100%;
+        width: 100%;
+        /* height: 1000px; */
+    }
+
+    video {
+        display: unset;
+        width: auto;
+        height: 63rem;
+        object-fit: cover;
+    }
+
+    #home_text {
+        position: relative;
+        left: 10.661000000000001rem;
+        bottom: 46.794rem;
+        width: max-content;
+        z-index: 3;
+        color: #EE5E23;
+        font-size: 2rem;
+        animation: text_appear 8s;
+    }
+
+    #ics_logo {
+        z-index: 3;
+        display: block;
+        position: relative;
+        left: 16rem;
+        bottom: 50rem;
+        height: 40%;
+        animation: logo_appear 2s;
+    }
+
+    .scroll {
+        display: none;
+        position: relative;
+        z-index: 4;
+        bottom: 4rem;
+        right: 35rem;
+        /* animation: scroll_indicator .9s linear infinite alternate-reverse; */
+    }
+
+    .scroll:hover {
+        filter: invert(43%) sepia(100%) saturate(1916%) hue-rotate(347deg) brightness(96%) contrast(94%);
+    }
+
+    .scroll:active {
+        transform: scale(.9);
+    }
+
+    @keyframes logo_appear {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 100;
+        }
+    }
+
+    @keyframes text_appear {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 100;
+        }
+    }
+
+    @keyframes scroll_indicator {
+        0% {
+            top: 1rem;
+        }
+
+        100% {
+            top: 1rem;
+        }
+    }
+
+    section {
+        order: 3;
+        z-index: 2;
+        position: relative;
+        display: block;
+        background-color: #ffffff;
+        padding-top: 0.625rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .section1 {
+        margin-bottom: -6.25rem;
+    }
+
+    .mission_title h5 {
+        position: absolute;
+        padding-top: 1.25rem;
+        top: 12.5rem;
+        left: 3.438rem;
+        bottom: 3.75rem;
+        font-size: 3.75rem;
+        font-weight: bolder;
+    }
+
+    .underline {
+        position: absolute;
+        top: 18.75rem;
+        left: 3.625rem;
+    }
+
+    .blg1 {
+        position: absolute;
+        border-radius: 5.5rem;
+        height: 9%;
+        width: 45%;
+        top: 4.8149999999999995rem;
+        left: 29.881999999999998rem;
+    }
+
+    .blg2 {
+        position: absolute;
+        border-radius: 5.5rem;
+        height: 10%;
+        width: 43%;
+        right: 4.005rem;
+        top: 27.158rem;
+    }
+
+    .summary {
+        position: absolute;
+        top: 21.25rem;
+        left: 3.75rem;
+        height: min-content;
+        width: 42%;
+    }
+
+    .h6_1 {
+        font-weight: 600;
+    }
+
+    .h6_2 {
+        font-weight: 600;
+    }
+
+    .p1 {
+        margin-top: 0rem;
+        font-size: 1.3rem;
+        font-weight: 200;
+        line-height: 2.75rem;
+    }
+
+    .schools {
+        position: relative;
+        background-image: url(/static/img/Student_lavelleprep.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 18.75rem;
+        margin-top: 70.313rem;
+        height: 50rem;
+    }
+
+    .schools:before {
+        position: absolute;
+        content: ' ';
+        background-color: rgba(56, 53, 53, 0.795);
+        height: 50rem;
+        width: 100%;
+    }
+
+    .schools_title {
+        text-align: center;
+        position: relative;
+        top: 6.25rem;
+        font-size: 3.75rem;
+        color: white;
+    }
+
+    .h5_1 {
+        color: #059744;
+        font-weight: 600;
+    }
+
+    .h5_2 {
+        color: #ee5e23;
+        font-weight: 600;
+    }
+
+
+    .school_img {
+        display: grid;
+        direction: unset;
+        text-overflow: unset;
+        overflow: unset;
+        grid-template-columns: 3.75rem 3.75rem;
+        grid-row: 3.75rem;
+        row-gap: 15%;
+        column-gap: 100%;
+        position: relative;
+        z-index: 8;
+        width: 22rem;
+        left: 10rem;
+        top: 10.769rem;
+        list-style-type: none;
+    }
+
+    .lav_icon {
+        width: 350%;
+        margin-right: 0;
+        transition: ease-in-out .5s;
+    }
+
+    .lav_icon:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .5s;
+    }
+
+    .nv_icon {
+        width: 395%;
+        margin-right: 0;
+        transition: ease-in-out .5s;
+    }
+
+    .nv_icon:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .5s;
+    }
+
+    .nic_icon {
+        width: 350%;
+        margin-right: 0;
+        transition: ease-in-out .5s;
+    }
+
+    .nic_icon:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .5s;
+    }
+
+    .rich_icon {
+        width: 350%;
+        margin-right: 0;
+        transition: ease-in-out .5s;
+    }
+
+    .rich_icon:hover {
+        transform: scale(1.3);
+        transition: ease-in-out .5s;
+    }
+
+    .pres_section {
+        background-color: #adb5bd;
+        height: 50rem;
+    }
+
+    .pres_img {
+        display: unset;
+        position: relative;
+        width: 40%;
+        height: 45%;
+        top: 20rem;
+        left: 1rem;
+        border-radius: 6.313rem;
+        margin: 0;
+    }
+
+    .quotes {
+        position: relative;
+        bottom: 3.625rem;
+        left: 3rem;
+    }
+
+    .top_quote {
+        position: relative;
+        bottom: 13rem;
+        left: 29.5rem;
+        font-size: 2.813rem;
+        font-weight: bolder;
+        width: 50%;
+    }
+
+    .mid_quote {
+        position: relative;
+        bottom: 12.75rem;
+        left: 29.5rem;
+        font-size: 1.563rem;
+        width: 50%;
+        line-height: 2.625rem;
+    }
+
+    .dash {
+        position: absolute;
+        top: 153.75rem;
+        left: 30.5rem;
+
+    }
+
+    .pres_title {
+        position: absolute;
+        top: 153.125rem;
+        left: 36.125rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .pres_name {
+        position: absolute;
+        top: 155.625rem;
+        left: 33.688rem;
+        font-size: 2.188rem;
+        font-style: italic;
+    }
+
+    .read_more {
+        position: absolute;
+        top: 159.375rem;
+        left: 35.75rem;
+        padding: 0.313rem 2.188rem;
+        border-radius: 1.25rem;
+        background-color: #17D12F;
+        color: #fff;
+        font-size: 1.125rem;
+        font-weight: 200;
+    }
+
+    .read_more:hover {
+        color: #000;
+        background-color: #fff;
+        border: 0.063rem solid #17D12F;
+    }
+
+    .read_more:active {
+        background-color: #17D12F;
+    }
+
+    .recent_news {
+        height: auto;
+    }
+
+    .news_title {
+        text-align: center;
+        margin: 2.5rem 0rem;
+        font-size: 3.75rem;
+    }
+
+    .accordion-item {
+        width: 80%;
+        margin: auto;
+    }
+
+    footer {
+        order: 4;
+        position: relative;
+        height: 37.5rem;
+        /*background-color: #343A40;*/
+        background: linear-gradient(130deg, #585858, #262727, #606161);
+        background-size: 600% 600%;
+        /*animation: Grad_BG 15s ease infinite;
+        -webkit-animation: Grad_BG 15s ease infinite;
+        -moz-animation: Grad_BG 15s ease infinite;*/
+    }
+
+    /*
+    @-webkit-keyframes Grad_BG {
+        0% { background-position: 0% 10% }
+        50% { background-position: 100% 91% }
+        100% { background-position: 0% 10% }
+    }
+    
+    @-moz-keyframes Grad_BG {
+        0% { background-position: 0% 10% }
+        50% { background-position: 100% 91% }
+        100% { background-position: 0% 10% }
+    }
+    
+    @keyframes Grad_BG {
+        0% { background-position: 0% 10% }
+        50% { background-position: 100% 91% }
+        100% { background-position: 0% 10% }
+    }
+    */
+
+    #address {
+        float: left;
+    }
+
+    #map {
+        height: 70%;
+        width: 45%;
+        float: right;
+        top: 8rem;
+        right: 0rem;
+        margin: 0;
+        border-radius: 0.625rem;
+    }
+
+    .ics_icon {
+        position: absolute;
+        top: 2.5rem;
+        left: 6.25rem;
+        width: 6.25rem;
+    }
+
+    .h1_1 {
+        color: #059744;
+        font-weight: 400;
+        display: inline;
+        font-size: 4.375rem;
+        margin-top: 1.563rem;
+        position: absolute;
+        left: 15rem;
+        top: 1.25rem;
+    }
+
+    .h1_2 {
+        color: #ee5e23;
+        font-weight: 400;
+        display: inline;
+        font-size: 4.375rem;
+        margin-top: 1.563rem;
+        position: absolute;
+        left: 31.563rem;
+        top: 1.25rem;
+    }
+
+    .schoolLocation {
+        display: inline-block;
+        position: absolute;
+        bottom: 3.125rem;
+        width: 48%;
+        left: 1.5rem;
+    }
+
+    .schoolLocation img {
+        width: 10%;
+        margin-left: 0.625rem;
+    }
+
+    .schoolLocation li {
+        list-style-type: none;
+        font-size: 1.563rem;
+        margin-bottom: 1.875rem;
+    }
+
+    .schoolLocation li a {
+        list-style-type: none;
+        font-size: 1.563rem;
+        text-decoration: none;
+        color: #fff;
+        margin-left: 1.875rem;
+    }
+
+    .schoolLocation li a:hover {
+        color: #059744;
+    }
+
+    .copyright {
+        order: 4;
+        text-align: center;
+        padding: 0.938rem;
+        list-style-type: none;
+        margin-bottom: 0rem;
+        font-weight: 400;
+        background: linear-gradient(270deg, #ee5e23, #059744);
+        background-size: 400% 400%;
+        -webkit-animation: copyright 30s ease infinite;
+        -moz-animation: copyright 30s ease infinite;
+        animation: copyright 30s ease infinite;
+    }
+
+    .copyright li a {
+        text-decoration: none;
+        color: rgb(37, 0, 248);
+    }
+
+    .copyright li a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    @-webkit-keyframes copyright {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @-moz-keyframes copyright {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes copyright {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    .locDescription {
+        display: none;
+        position: absolute;
+        left: 15.625rem;
+        font-size: 1.5rem;
+        background-color: rgba(150, 150, 150, 0.295);
+        padding: 1.25rem;
+        border-radius: 1.563rem;
+        border: 0.063rem solid rgba(0, 0, 0, 0.062);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .description1 {
+        bottom: 11.875rem;
+    }
+
+    .description2 {
+        bottom: -1.875rem;
+    }
+
+    .description3 {
+        bottom: -2.188rem;
+    }
+
+    .nav_link_4:active {
+        transform: scale(.9);
+    }
+
+    #scrollTop {
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+
+    /*nav links Settings*/
+    nav {
+        order: 1;
+        padding-top: 1.563rem;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+
+    .nav_links {
+        list-style-type: none;
+        font-size: 1.563rem;
+    }
+
+    /*Sets nav links to be white*/
+    .white_link {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .nav_link_1 {
+        display: none;
+    }
+
+    .nav_link_2 {
+        display: none;
+    }
+
+    .nav_link_3 {
+        display: none;
+    }
+
+    .nav_link_4 {
+        display: none;
+    }
+
+    .nav_link_5 {
+        display: inline;
+    }
+
+    .nav_link_6 {
+        display: flex;
+    }
+
+    .menu_text {
+        z-index: -11;
+        display: block;
+        left: 95.04rem;
+        position: relative;
+        width: max-content;
+        opacity: 0;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .scroll_top {
+        display: unset;
+    }
+
+    .scroll_top:hover {
+        color: #EE5E23;
+    }
+
+    .scroll_top:active {
+        transform: scale(.9);
+    }
+
+    .background_video {
+        order: 2;
+        position: relative;
+        display: inline-block;
+        min-height: 62.563rem;
+        height: 63.20rem;
+        width: 100%;
+        /* margin-bottom: -100px; */
+    }
+
+    video {
+        display: unset;
+        width: auto;
+        height: 64rem;
+        object-fit: cover;
+    }
+
+    #home_text {
+        position: relative;
+        left: 2rem;
+        bottom: 48rem;
+        width: max-content;
+        z-index: 3;
+        color: #EE5E23;
+        width: 100%;
+        font-size: 2rem;
+        animation: text_appear 8s;
+    }
+
+    #ics_logo {
+        z-index: 3;
+        display: block;
+        position: relative;
+        bottom: 50rem;
+        left: 8rem;
+        height: 40%;
+    }
+
+    .scroll {
+        position: relative;
+        z-index: 4;
+        top: 25rem;
+        left: 20.2rem;
+        animation: scroll_indicator .6s linear infinite alternate-reverse;
+
+    }
+
+    @keyframes scroll_indicator {
+        0% {
+            top: 24.5rem;
+        }
+
+        100% {
+            top: 26rem;
+        }
+    }
+
+    .section1 {
+        margin-bottom: 0rem;
+    }
+
+    .mission_title h5 {
+        position: absolute;
+        padding-top: 1.25rem;
+        top: 30.5rem;
+        left: 3.438rem;
+        bottom: 3.75rem;
+        font-size: 3.75rem;
+        font-weight: bolder;
+    }
+
+    .underline {
+        position: absolute;
+        top: 36.75rem;
+        left: 3.625rem;
+    }
+
+    .blg1 {
+        position: absolute;
+        border-radius: 5.5rem;
+        height: 8%;
+        top: 2.815rem;
+        left: -2rem;
+        width: 65%;
+        text-overflow: unset;
+    }
+
+    .blg2 {
+        position: absolute;
+        border-radius: 5.5rem;
+        overflow: hidden;
+        text-overflow: clip;
+        height: 8%;
+        right: -2rem;
+        top: 12.158rem;
+        width: 65%;
+    }
+
+    .summary {
+        position: absolute;
+        top: 38.25rem;
+        left: 3.75rem;
+        height: 28.25rem;
+        width: 80%;
+    }
+
+    .h6_1 {
+        font-weight: 600;
+    }
+
+    .h6_2 {
+        font-weight: 600;
+    }
+
+    .p1 {
+        margin-top: 0rem;
+        font-size: 1.2rem;
+        font-weight: 200;
+        line-height: 3rem;
+    }
+
+    .schools {
+        position: relative;
+        background-image: url(/static/img/Student_lavelleprep.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 18.75rem;
+        margin-top: 70.313rem;
+        height: 50rem;
+    }
+
+    .schools:before {
+        position: absolute;
+        content: ' ';
+        background-color: rgba(56, 53, 53, 0.795);
+        height: 50rem;
+        width: 100%;
+    }
+
+    .schools_title {
+        text-align: center;
+        position: relative;
+        top: 6.25rem;
+        right: 4rem;
+        font-size: 3.75rem;
+        color: white;
+    }
+
+    .h5_1 {
+        color: #059744;
+        font-weight: 600;
+    }
+
+    .h5_2 {
+        color: #ee5e23;
+        font-weight: 600;
+    }
+
+
+    .school_img {
+        display: grid;
+        direction: unset;
+        text-overflow: unset;
+        overflow: unset;
+        grid-template-columns: 11.75rem 11.75rem;
+        grid-row: 3.75rem;
+        row-gap: 15%;
+        column-gap: 10%;
+        position: relative;
+        z-index: 8;
+        width: 100%;
+        left: 0rem;
+        top: 10.769rem;
+        list-style-type: none;
+    }
+
+    .lav_icon {
+        width: 100%;
+        transition: ease-in-out .5s;
+    }
+
+    .lav_icon:hover {
+        transform: unset;
+        transition: ease-in-out .5s;
+    }
+
+    .nv_icon {
+        width: 100%;
+        transition: ease-in-out .5s;
+    }
+
+    .nv_icon:hover {
+        transform: unset;
+        transition: ease-in-out .5s;
+    }
+
+    .nic_icon {
+        width: 100%;
+        transition: ease-in-out .5s;
+    }
+
+    .nic_icon:hover {
+        transform: unset;
+        transition: ease-in-out .5s;
+    }
+
+    .rich_icon {
+        width: 100%;
+        transition: ease-in-out .5s;
+    }
+
+    .rich_icon:hover {
+        transform: unset;
+        transition: ease-in-out .5s;
+    }
+
+    .pres_section {
+        background-color: #adb5bd;
+        height: 50rem;
+    }
+
+    .pres_img {
+        display: inline-block;
+        position: absolute;
+        height: 8%;
+        width: 35%;
+        border-radius: 6.313rem rem;
+        margin: 0;
+        top: 152rem;
+        left: 3rem;
+    }
+
+    .quotes {
+        top: 3rem;
+        left: 2rem;
+    }
+
+
+    .top_quote {
+        position: relative;
+        top: 1rem;
+        left: 10rem;
+        font-size: 2.4rem;
+        font-weight: bolder;
+        width: 65%;
+        color: #fff;
+    }
+
+    .mid_quote {
+        position: relative;
+        top: 0.75rem;
+        left: 4.5rem;
+        font-size: 1.563rem;
+        width: 80%;
+        line-height: 2.625rem;
+        color: #fff;
+    }
+
+    .dash {
+        position: absolute;
+        top: 158.75rem;
+        left: 23rem;
+    }
+
+    .pres_title {
+        position: absolute;
+        top: 158.125rem;
+        left: 28.125rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .pres_name {
+        position: absolute;
+        top: 160.625rem;
+        left: 21.688rem;
+        font-size: 2.188rem;
+        font-style: italic;
+        color: #fff;
+    }
+
+    .read_more {
+        position: absolute;
+        top: 165.375rem;
+        left: 27.75rem;
+        padding: 0.313rem 2.188rem;
+        border-radius: 1.25rem;
+        background-color: #17D12F;
+        color: #fff;
+        font-size: 1.125rem;
+        font-weight: 200;
+    }
+
+    .read_more:hover {
+        color: #000;
+        background-color: #fff;
+        border: 0.063rem solid #17D12F;
+    }
+
+    .read_more:active {
+        background-color: #17D12F;
+    }
+
+    .recent_news {
+        position: unset;
+        height: 100%;
+    }
+
+    .news_title {
+        text-align: center;
+        margin: 2.5rem 0rem;
+        font-size: 3.75rem;
+        right: 2rem;
+    }
+
+    .accordion {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .accordion-item {
+        width: 90%;
+        margin: auto;
+    }
+
+    footer {
+        order: 4;
+        position: relative;
+        height: 65rem;
+        /*background-color: #343A40;*/
+        background: linear-gradient(130deg, #585858, #262727, #606161);
+        background-size: 600% 600%;
+        /*animation: Grad_BG 15s ease infinite;
+                    -webkit-animation: Grad_BG 15s ease infinite;
+                    -moz-animation: Grad_BG 15s ease infinite;*/
+    }
+
+    #address {
+        float: left;
+    }
+
+    #map {
+        height: 43%;
+        width: 80%;
+        float: right;
+        margin: 3.75rem 12.5rem 0rem 3.125rem;
+        border-radius: 0.625rem;
+        top: 8rem;
+        left: 7.5rem;
+    }
+
+    .ics_icon {
+        position: absolute;
+        top: 2.5rem;
+        left: 2.25rem;
+        width: 6.25rem;
+    }
+
+    .h1_1 {
+        color: #059744;
+        font-weight: 200;
+        display: inline;
+        font-size: 3.375rem;
+        margin-top: 0rem;
+        position: absolute;
+        left: 10.6rem;
+        top: 3rem;
+    }
+
+    .h1_2 {
+        color: #ee5e23;
+        font-weight: 200;
+        display: inline;
+        font-size: 3.375rem;
+        margin-top: 1.563rem;
+        position: absolute;
+        left: 10.563rem;
+        top: 4.5rem;
+    }
+
+    .schoolLocation {
+        display: inline-block;
+        position: absolute;
+        width: 101%;
+        bottom: 3.125rem;
+        bottom: 1rem;
+        left: 2.5rem;
+    }
+
+    .schoolLocation img {
+        width: 10%;
+        margin-left: 0.625rem;
+    }
+
+    .schoolLocation li {
+        list-style-type: none;
+        font-size: 1.563rem;
+        margin-bottom: 1.875rem;
+        width: 80%;
+    }
+
+    .schoolLocation li a {
+        list-style-type: none;
+        font-size: 1.563rem;
+        text-decoration: none;
+        color: #fff;
+        margin-left: 1.875rem;
+    }
+
+    .schoolLocation li a:hover {
+        color: #059744;
+    }
+
+    .copyright {
+        order: 4;
+        text-align: center;
+        padding: 0.938rem;
+        list-style-type: none;
+        height: 5rem;
+        margin-bottom: 0rem;
+        font-weight: 400;
+        background: linear-gradient(270deg, #ee5e23, #059744);
+        background-size: 400% 400%;
+        -webkit-animation: copyright 30s ease infinite;
+        -moz-animation: copyright 30s ease infinite;
+        animation: copyright 30s ease infinite;
+    }
+
+    .locDescription {
+        display: none;
+        position: absolute;
+        left: 15.625rem;
+        font-size: 1.5rem;
+        background-color: rgba(150, 150, 150, 0.295);
+        padding: 1.25rem;
+        border-radius: 1.563rem;
+        border: 0.063rem solid rgba(0, 0, 0, 0.062);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .description1 {
+        display: none;
+        bottom: 11.875rem;
+    }
+
+    .description2 {
+        display: none;
+        bottom: -1.875rem;
+    }
+
+    .description3 {
+        display: none;
+        bottom: -2.188rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+    /*nav links Settings
+        nav {
+            order: 1;
+            padding-top: 1.563rem;
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+        }
+    
+        .nav_links {
+            list-style-type: none;
+            font-size: 1.563rem;
+        }
+    
+        /*Sets nav links to be white*
+        .white_link {
+            text-decoration: none;
+            color: #fff;
+        }
+    
+        .nav_link_1 {
+            display: none;
+        }
+    
+        .nav_link_2 {
+            display: none;
+        }
+    
+        .nav_link_3 {
+            display: none;
+        }
+    
+        .nav_link_4 {
+            display: none;
+        }
+    
+        .nav_link_5 {
+            display: inline;
+        }
+    
+        .nav_link_6 {
+            display: flex;
+            right: 3.25rem;
+        }
+    
+        .menu_text {
+            display: none;
+        }
+    
+        .scroll_top {
+            display: none;
+        }
+    
+        .scroll_top:hover {
+            color: #EE5E23;
+        }
+    
+        .scroll_top:active {
+            transform: scale(.9);
+        }
+    
+        .background_video {
+            order: 2;
+            position: relative;
+            display: inline-block;
+            min-height: 62.563rem;
+            height: 63.20rem;
+            width: 100%;
+            /* margin-bottom: -100px; *
+        }
+    
+        video {
+            display: none;
+        }
+    
+        #home_text {
+            position: relative;
+            left: 5rem;
+            top: 20rem;
+            width: max-content;
+            z-index: 3;
+            color: #EE5E23;
+            width: 40rem;
+            font-size: 2rem;
+            animation: text_appear 8s;
+        }
+    
+        #ics_logo {
+            z-index: 3;
+            display: block;
+            position: relative;
+            top: 16rem;
+            left: 4.300000000000001rem;
+            height: 40%;
+        }
+    
+        .scroll {
+            position: relative;
+            z-index: 4;
+            top: 25rem;
+            left: 16.2rem;
+            animation: scroll_indicator .6s linear infinite alternate-reverse;
+    
+        }
+    
+        @keyframes scroll_indicator {
+            0% {
+                top: 20rem;
+            }
+    
+            100% {
+                top: 22.5rem;
+            }
+        }
+    
+        .section1 {
+            margin-bottom: 0rem;
+        }
+    
+        .mission_title h5 {
+            position: absolute;
+            padding-top: 1.25rem;
+            top: 30.5rem;
+            left: 3.438rem;
+            bottom: 3.75rem;
+            font-size: 3.75rem;
+            font-weight: bolder;
+        }
+    
+        .underline {
+            position: absolute;
+            top: 36.75rem;
+            left: 3.625rem;
+        }
+    
+        .blg1 {
+            position: absolute;
+            border-radius: 5.5rem;
+            height: 8%;
+            top: 2.815rem;
+            left: -2rem;
+            width: 65%;
+            text-overflow: unset;
+        }
+    
+        .blg2 {
+            position: absolute;
+            border-radius: 5.5rem;
+            overflow: hidden;
+            text-overflow: clip;
+            height: 8%;
+            right: -2rem;
+            top: 12.158rem;
+            width: 65%;
+        }
+    
+        .summary {
+            position: absolute;
+            top: 37.25rem;
+            left: 3.75rem;
+            height: 28.25rem;
+            width: 80%;
+        }
+    
+        .h6_1 {
+            font-weight: 600;
+        }
+    
+        .h6_2 {
+            font-weight: 600;
+        }
+    
+        .p1 {
+            margin-top: 0rem;
+            font-size: 1rem;
+            font-weight: 200;
+            line-height: 2.5rem;
+        }
+    
+        .schools {
+            position: relative;
+            background-image: url(/static/img/Student_lavelleprep.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            min-height: 18.75rem;
+            margin-top: 70.313rem;
+            height: 50rem;
+        }
+    
+        .schools:before {
+            position: absolute;
+            content: ' ';
+            background-color: rgba(56, 53, 53, 0.795);
+            height: 50rem;
+            width: 100%;
+        }
+    
+        .schools_title {
+            text-align: center;
+            position: relative;
+            top: 6.25rem;
+            right: 4rem;
+            font-size: 3.75rem;
+            color: white;
+        }
+    
+        .h5_1 {
+            color: #059744;
+            font-weight: 600;
+        }
+    
+        .h5_2 {
+            color: #ee5e23;
+            font-weight: 600;
+        }
+    
+    
+        .school_img {
+            overflow: scroll;
+            direction: ltr;
+            text-overflow: ellipsis;
+            display: flex;
+            flex-direction: row;
+            flex: 0 0 auto;
+            width: 100%;
+            left: 0rem;
+            column-gap: 10%;
+            /* grid-template-columns: 3.75rem 3.75rem 3.75rem 3.75rem;
+                column-gap: 60%;
+                z-index: 8;
+                width: 32.4rem;
+                left: 12.96rem;
+                top: 18.769rem;
+                list-style-type: none; *
+        }
+    
+        .lav_icon {
+            width: 100%;
+            margin-right: 20rem;
+            transition: ease-in-out .5s;
+        }
+    
+        .lav_icon:hover {
+            transform: unset;
+            transition: ease-in-out .5s;
+        }
+    
+        .nv_icon {
+            width: 100%;
+            margin-right: 20rem;
+            transition: ease-in-out .5s;
+        }
+    
+        .nv_icon:hover {
+            transform: unset;
+            transition: ease-in-out .5s;
+        }
+    
+        .nic_icon {
+            width: 100%;
+            margin-right: 20rem;
+            transition: ease-in-out .5s;
+        }
+    
+        .nic_icon:hover {
+            transform: unset;
+            transition: ease-in-out .5s;
+        }
+    
+        .rich_icon {
+            width: 100%;
+            margin-right: 20rem;
+            transition: ease-in-out .5s;
+        }
+    
+        .rich_icon:hover {
+            transform: unset;
+            transition: ease-in-out .5s;
+        }
+    
+        .pres_section {
+            background-color: #adb5bd;
+            height: 50rem;
+        }
+    
+        .pres_img {
+            display: none;
+            position: relative;
+            width: 35%;
+            border-radius: 6.313rem;
+            margin: 6.25rem;
+            top: 30rem;
+            left: -4rem;
+        }
+    
+        .quotes {
+            top: 3rem;
+            left: 2rem;
+        }
+    
+    
+        .top_quote {
+            position: relative;
+            top: 1rem;
+            left: 10rem;
+            font-size: 2rem;
+            font-weight: bolder;
+            width: 60%;
+            color: #fff;
+        }
+    
+        .mid_quote {
+            position: relative;
+            top: 0.75rem;
+            left: 4.5rem;
+            font-size: 1.563rem;
+            width: 80%;
+            line-height: 2.625rem;
+            color: #fff;
+        }
+    
+        .dash {
+            position: absolute;
+            top: 158.75rem;
+            left: 5rem;
+        }
+    
+        .pres_title {
+            position: absolute;
+            top: 158.125rem;
+            left: 10.125rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+        }
+    
+        .pres_name {
+            position: absolute;
+            top: 160.625rem;
+            left: 6.688rem;
+            font-size: 2.188rem;
+            font-style: italic;
+            color: #fff;
+        }
+    
+        .read_more {
+            position: absolute;
+            top: 165.375rem;
+            left: 15.75rem;
+            padding: 0.313rem 2.188rem;
+            border-radius: 1.25rem;
+            background-color: #17D12F;
+            color: #fff;
+            font-size: 1.125rem;
+            font-weight: 200;
+        }
+    
+        .read_more:hover {
+            color: #000;
+            background-color: #fff;
+            border: 0.063rem solid #17D12F;
+        }
+    
+        .read_more:active {
+            background-color: #17D12F;
+        }
+    
+        .recent_news {
+            position: relative;
+            height: 100%;
+            right: 1rem;
+        }
+    
+        .news_title {
+            text-align: center;
+            margin: 2.5rem 0rem;
+            font-size: 3.75rem;
+            right: 2rem;
+        }
+    
+        .accordion {
+            width: 100%;
+            margin-left: 0;
+        }
+    
+        .accordion-item {
+            width: 80%;
+            margin: auto;
+        }
+    
+        footer {
+            order: 4;
+            position: relative;
+            height: 65rem;
+            /*background-color: #343A40;*
+            background: linear-gradient(130deg, #585858, #262727, #606161);
+            background-size: 600% 600%;
+            /*animation: Grad_BG 15s ease infinite;
+            -webkit-animation: Grad_BG 15s ease infinite;
+            -moz-animation: Grad_BG 15s ease infinite;*
+        }
+    
+        #address {
+            float: unset;
+        }
+    
+        #map {
+            height: 43%;
+            width: 80%;
+            float: unset;
+            margin: 0rem 0rem 0rem 0rem;
+            border-radius: 0.625rem;
+            top: 12rem;
+            left: 3.5rem;
+        }
+    
+        .ics_icon {
+            position: absolute;
+            top: 2.5rem;
+            left: 2.25rem;
+            width: 6.25rem;
+        }
+    
+        .h1_1 {
+            color: #059744;
+            font-weight: 200;
+            display: inline;
+            font-size: 3.375rem;
+            margin-top: 0rem;
+            position: absolute;
+            left: 10.6rem;
+            top: 3rem;
+        }
+    
+        .h1_2 {
+            color: #ee5e23;
+            font-weight: 200;
+            display: inline;
+            font-size: 3.375rem;
+            margin-top: 1.563rem;
+            position: absolute;
+            left: 10.563rem;
+            top: 4.5rem;
+        }
+    
+        .schoolLocation {
+            display: inline-block;
+            position: absolute;
+            bottom: 3.125rem;
+            bottom: -1rem;
+            left: .5rem;
+        }
+    
+        .schoolLocation img {
+            width: 10%;
+            margin-left: 0.625rem;
+        }
+    
+        .schoolLocation li {
+            list-style-type: none;
+            font-size: 1.563rem;
+            margin-bottom: 1.875rem;
+            width: 90%;
+        }
+    
+        .schoolLocation li a {
+            list-style-type: none;
+            font-size: 1.563rem;
+            text-decoration: none;
+            color: #fff;
+            margin-left: 1.875rem;
+        }
+    
+        .schoolLocation li a:hover {
+            color: #059744;
+        }
+    
+        .copyright {
+            order: 4;
+            text-align: center;
+            padding: 0.938rem;
+            list-style-type: none;
+            height: 5rem;
+            margin-bottom: 0rem;
+            font-weight: 400;
+            background: linear-gradient(270deg, #ee5e23, #059744);
+            background-size: 400% 400%;
+            -webkit-animation: copyright 30s ease infinite;
+            -moz-animation: copyright 30s ease infinite;
+            animation: copyright 30s ease infinite;
+        }
+
+        .locDescription {
+            display: none;
+            position: absolute;
+            left: 15.625rem;
+            font-size: 1.5rem;
+            background-color: rgba(150, 150, 150, 0.295);
+            padding: 1.25rem;
+            border-radius: 1.563rem;
+            border: 0.063rem solid rgba(0, 0, 0, 0.062);
+            backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        .description1 {
+            display: none;
+            bottom: 11.875rem;
+        }
+
+        .description2 {
+            display: none;
+            bottom: -1.875rem;
+        }
+
+        .description3 {
+            display: none;
+            bottom: -2.188rem;
+        }
+} */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    /*nav links Settings*/
+    nav {
+        order: 1;
+        padding-top: 1.563rem;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+
+    .nav_links {
+        list-style-type: none;
+        font-size: 1.563rem;
+    }
+
+    /*Sets nav links to be white*/
+    .white_link {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .nav_link_1 {
+        display: none;
+    }
+
+    .nav_link_2 {
+        display: none;
+    }
+
+    .nav_link_3 {
+        display: none;
+    }
+
+    .nav_link_4 {
+        display: none;
+    }
+
+    .nav_link_5 {
+        display: inline;
+    }
+
+    .nav_link_6 {
+        display: flex;
+        right: 3.25rem;
+    }
+
+    .menu_text {
+        display: none;
+    }
+
+    .scroll_top {
+        display: none;
+    }
+
+    .scroll_top:hover {
+        color: #EE5E23;
+    }
+
+    .scroll_top:active {
+        transform: scale(.9);
+    }
+
+    .background_video {
+        order: 2;
+        position: relative;
+        display: inline-block;
+        min-height: 62.563rem;
+        height: 63.20rem;
+        width: 100%;
+        /* margin-bottom: -100px; */
+    }
+
+    video {
+        display: unset;
+    }
+
+    #home_text {
+        position: relative;
+        left: 2rem;
+        bottom: 46rem;
+        width: max-content;
+        z-index: 3;
+        color: #EE5E23;
+        width: 100%;
+        font-size: 2rem;
+        animation: text_appear 8s;
+    }
+
+    #ics_logo {
+        z-index: 3;
+        display: block;
+        position: relative;
+        bottom: 48rem;
+        left: 5rem;
+        height: 35%;
+    }
+
+    .scroll {
+        position: relative;
+        z-index: 4;
+        top: 25rem;
+        left: 14.2rem;
+        animation: scroll_indicator .6s linear infinite alternate-reverse;
+
+    }
+
+    @keyframes scroll_indicator {
+        0% {
+            top: 24.5rem;
+        }
+
+        100% {
+            top: 26rem;
+        }
+    }
+
+    .section1 {
+        margin-bottom: 0rem;
+    }
+
+    .mission_title h5 {
+        position: absolute;
+        padding-top: 1.25rem;
+        top: 30.5rem;
+        left: 3.438rem;
+        bottom: 3.75rem;
+        font-size: 3.75rem;
+        font-weight: bolder;
+    }
+
+    .underline {
+        position: absolute;
+        top: 36.75rem;
+        left: 3.625rem;
+    }
+
+    .blg1 {
+        position: absolute;
+        border-radius: 5.5rem;
+        height: 8%;
+        top: 2.815rem;
+        left: -2rem;
+        width: 65%;
+        text-overflow: unset;
+    }
+
+    .blg2 {
+        position: absolute;
+        border-radius: 5.5rem;
+        overflow: hidden;
+        text-overflow: clip;
+        height: 8%;
+        right: -2rem;
+        top: 12.158rem;
+        width: 65%;
+    }
+
+    .summary {
+        position: absolute;
+        top: 37.25rem;
+        left: 3.75rem;
+        height: 28.25rem;
+        width: 80%;
+    }
+
+    .h6_1 {
+        font-weight: 600;
+    }
+
+    .h6_2 {
+        font-weight: 600;
+    }
+
+    .p1 {
+        margin-top: 0rem;
+        font-size: 1rem;
+        font-weight: 200;
+        line-height: 2.5rem;
+    }
+
+    .schools {
+        position: relative;
+        background-image: url(/static/img/Student_lavelleprep.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 18.75rem;
+        margin-top: 70.313rem;
+        height: 50rem;
+    }
+
+    .schools:before {
+        position: absolute;
+        content: ' ';
+        background-color: rgba(56, 53, 53, 0.795);
+        height: 50rem;
+        width: 100%;
+    }
+
+    .schools_title {
+        text-align: center;
+        position: relative;
+        top: 6.25rem;
+        right: 3rem;
+        font-size: 3.75rem;
+        color: white;
+    }
+
+    .h5_1 {
+        color: #059744;
+        font-weight: 600;
+    }
+
+    .h5_2 {
+        color: #ee5e23;
+        font-weight: 600;
+    }
+
+
+    .school_img {
+        display: grid;
+        grid-template-columns: 11.75rem 11.75rem;
+        grid-row: 3.75rem;
+        row-gap: 15%;
+        column-gap: 10%;
+        position: relative;
+        z-index: 8;
+        width: 100%;
+        left: 2rem;
+        top: 10.769rem;
+        list-style-type: none;
+    }
+
+    .lav_icon {
+        width: 100%;
+        transition: ease-in-out .5s;
+    }
+
+    .lav_icon:hover {
+        transform: unset;
+        transition: ease-in-out .5s;
+    }
+
+    .nv_icon {
+        width: 100%;
+        transition: ease-in-out .5s;
+    }
+
+    .nv_icon:hover {
+        transform: unset;
+        transition: ease-in-out .5s;
+    }
+
+    .nic_icon {
+        width: 100%;
+        transition: ease-in-out .5s;
+    }
+
+    .nic_icon:hover {
+        transform: unset;
+        transition: ease-in-out .5s;
+    }
+
+    .rich_icon {
+        width: 100%;
+        transition: ease-in-out .5s;
+    }
+
+    .rich_icon:hover {
+        transform: unset;
+        transition: ease-in-out .5s;
+    }
+
+    .pres_section {
+        background-color: #adb5bd;
+        height: 50rem;
+    }
+
+    .pres_img {
+        display: none;
+        position: relative;
+        width: 35%;
+        border-radius: 6.313rem;
+        margin: 6.25rem;
+        top: 30rem;
+        left: -4rem;
+    }
+
+    .quotes {
+        top: 3rem;
+        left: 2rem;
+    }
+
+
+    .top_quote {
+        position: relative;
+        top: 1rem;
+        left: 10rem;
+        font-size: 2rem;
+        font-weight: bolder;
+        width: 60%;
+        color: #fff;
+    }
+
+    .mid_quote {
+        position: relative;
+        top: 0.75rem;
+        left: 4.5rem;
+        font-size: 1.563rem;
+        width: 80%;
+        line-height: 2.625rem;
+        color: #fff;
+    }
+
+    .dash {
+        position: absolute;
+        top: 158.75rem;
+        left: 5rem;
+    }
+
+    .pres_title {
+        position: absolute;
+        top: 158.125rem;
+        left: 10.125rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .pres_name {
+        position: absolute;
+        top: 160.625rem;
+        left: 6.688rem;
+        font-size: 2.188rem;
+        font-style: italic;
+        color: #fff;
+    }
+
+    .read_more {
+        position: absolute;
+        top: 165.375rem;
+        left: 15.75rem;
+        padding: 0.313rem 2.188rem;
+        border-radius: 1.25rem;
+        background-color: #17D12F;
+        color: #fff;
+        font-size: 1.125rem;
+        font-weight: 200;
+    }
+
+    .read_more:hover {
+        color: #000;
+        background-color: #fff;
+        border: 0.063rem solid #17D12F;
+    }
+
+    .read_more:active {
+        background-color: #17D12F;
+    }
+
+    .recent_news {
+        position: relative;
+        height: 100%;
+        right: 1rem;
+    }
+
+    .news_title {
+        text-align: center;
+        margin: 2.5rem 0rem;
+        font-size: 3.75rem;
+    }
+
+    .accordion {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .accordion-item {
+        width: 80%;
+        margin: auto;
+    }
+
+    footer {
+        order: 4;
+        position: relative;
+        height: 65rem;
+        /*background-color: #343A40;*/
+        background: linear-gradient(130deg, #585858, #262727, #606161);
+        background-size: 600% 600%;
+        /*animation: Grad_BG 15s ease infinite;
+        -webkit-animation: Grad_BG 15s ease infinite;
+        -moz-animation: Grad_BG 15s ease infinite;*/
+    }
+
+    #address {
+        float: unset;
+    }
+
+    #map {
+        height: 43%;
+        width: 80%;
+        margin: 0;
+        left: -4rem;
+        border-radius: 0.625rem;
+        top: 12rem;
+    }
+
+    .ics_icon {
+        position: absolute;
+        top: 2.5rem;
+        left: 2.25rem;
+        width: 6.25rem;
+    }
+
+    .h1_1 {
+        color: #059744;
+        font-weight: 200;
+        display: inline;
+        font-size: 3.375rem;
+        margin-top: 0rem;
+        position: absolute;
+        left: 10.6rem;
+        top: 3rem;
+    }
+
+    .h1_2 {
+        color: #ee5e23;
+        font-weight: 200;
+        display: inline;
+        font-size: 3.375rem;
+        margin-top: 1.563rem;
+        position: absolute;
+        left: 10.563rem;
+        top: 4.5rem;
+    }
+
+    .schoolLocation {
+        display: inline-block;
+        position: absolute;
+        bottom: 3.125rem;
+        bottom: -1rem;
+        left: .5rem;
+    }
+
+    .schoolLocation img {
+        width: 10%;
+        margin-left: 0.625rem;
+    }
+
+    .schoolLocation li {
+        list-style-type: none;
+        font-size: 1.563rem;
+        margin-bottom: 1.875rem;
+        width: 90%;
+    }
+
+    .schoolLocation li a {
+        list-style-type: none;
+        font-size: 1.563rem;
+        text-decoration: none;
+        color: #fff;
+        margin-left: 1.875rem;
+    }
+
+    .schoolLocation li a:hover {
+        color: #059744;
+    }
+
+    .copyright {
+        order: 4;
+        text-align: center;
+        padding: 0.938rem;
+        list-style-type: none;
+        height: 5rem;
+        margin-bottom: 0rem;
+        font-weight: 400;
+        background: linear-gradient(270deg, #ee5e23, #059744);
+        background-size: 400% 400%;
+        -webkit-animation: copyright 30s ease infinite;
+        -moz-animation: copyright 30s ease infinite;
+        animation: copyright 30s ease infinite;
+    }
+
+    .locDescription {
+        display: none;
+        position: absolute;
+        left: 15.625rem;
+        font-size: 1.5rem;
+        background-color: rgba(150, 150, 150, 0.295);
+        padding: 1.25rem;
+        border-radius: 1.563rem;
+        border: 0.063rem solid rgba(0, 0, 0, 0.062);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .description1 {
+        display: none;
+        bottom: 11.875rem;
+    }
+
+    .description2 {
+        display: none;
+        bottom: -1.875rem;
+    }
+
+    .description3 {
+        display: none;
+        bottom: -2.188rem;
+    }
+
+
+
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 0.938rem;
+    }
+
+    .sidenav a {
+        font-size: 1.125rem;
+    }
+}
+
+
+
+
+
+
+
+
+
