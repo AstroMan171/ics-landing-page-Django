@@ -80,35 +80,49 @@ $('.nav_link_6').on('mouseover', function(){
     }, 200, 'linear').stop(false, true)
 })
 
-//TODO: refactor hover animations to use event object
-//Hover animation for first dropdown menu in sidebar
-$("#dropdown-btn1").hover(
-    function () {
-        $('#dropdown1').stop(true, false).slideDown('medium').delay(400);
-    },
-    function () {
-        $('#dropdown1').delay(200);
-        $('#dropdown1').on('mouseover', function(e){
-            $('#dropdown1').stop(true, false).slideDown('medium').show();
-        }).on('mouseout', function(){
-            $('#dropdown1').stop(true, false).slideUp('medium')
-        })
-        $('#dropdown1').slideUp('medium').delay(400)
-    })
-
 //Hover animation for second dropdown menu in sidebar
-$("#dropdown-btn2").hover(
-    function () {
-        $('#dropdown2').stop(true, false).slideDown('medium').delay(200);
-    },
-    function () {
-        $('#dropdown2').delay(200).slideUp('medium')
-        $('#dropdown2').on('mouseover', function(e){
-            $('#dropdown2').stop(true, false, true).slideDown('medium').show();
-        }).on('mouseout', function(){
-            $('#dropdown2').stop(true, false).slideUp('medium')
-        })
-    })
+function checkWindowSize() {
+    var windowWidth = $(window).width();
+
+    // clean up all handlers first
+    $("#dropdown-btn1, #dropdown-btn2").off('mouseenter mouseleave click');
+    $('#dropdown1, #dropdown2').off('mouseenter mouseleave');
+
+    if (windowWidth < 992) {
+        // for smaller screens, use click event
+        $("#dropdown-btn1, #dropdown-btn2").on('click', function () {
+            var dropdown = $(this).next(); // assumes the dropdown is the next sibling of the button
+            dropdown.stop(true, false).slideToggle('medium');
+        });
+    } else {
+        // for larger screens, use hover event
+        $("#dropdown-btn1, #dropdown-btn2").hover(
+            function () {
+                var dropdown = $(this).next(); // assumes the dropdown is the next sibling of the button
+                dropdown.stop(true, false).slideDown('medium');
+            },
+            function () {
+                var dropdown = $(this).next(); // assumes the dropdown is the next sibling of the button
+                dropdown.delay(200).slideUp('medium');
+            }
+        );
+
+        $('#dropdown1, #dropdown2').hover(
+            function () {
+                $(this).stop(true, false).slideDown('medium');
+            },
+            function () {
+                $(this).stop(true, false).slideUp('medium');
+            }
+        );
+    }
+}
+
+// Call checkWindowSize() when window is resized.
+$(window).resize(checkWindowSize);
+
+// Call checkWindowSize() on page load.
+$(document).ready(checkWindowSize);
 
 //Event listener for green scroll down button
 $('.scroll').on('click', (e) =>{
@@ -249,12 +263,17 @@ window.init = () => {
 }
 
 //Fade in & out animation for address link pop-up boxes
-$('.schoolLocation').on('mouseover', 'li a', function(e){
-    let link = e.target;
-    let description = $(link).siblings(".locDescription")
-    description.stop(false, true).fadeIn('fast')
-}).on('mouseout', 'li a',  function(e){
-    let link = e.target;
-    let description = $(link).siblings(".locDescription")
-    description.stop(false, true).fadeOut('fast')
-})
+$(window).resize(function () {
+    $('.schoolLocation').off('mouseover mouseout'); // remove previously added handlers when resizing
+    if ($(window).width() >= 992) {
+        $('.schoolLocation').on('mouseover', 'li a', function (e) {
+            let link = e.target;
+            let description = $(link).siblings(".locDescription");
+            description.stop(false, true).fadeIn('fast');
+        }).on('mouseout', 'li a', function (e) {
+            let link = e.target;
+            let description = $(link).siblings(".locDescription");
+            description.stop(false, true).fadeOut('fast');
+        });
+    }
+}).resize(); // trigger the event to ensure handlers are set correctly on page load

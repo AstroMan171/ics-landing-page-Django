@@ -13,6 +13,7 @@
 body {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 /*Makes scrollbar thin*/
@@ -172,7 +173,7 @@ nav {
 
 .menu_text {
     z-index: -11;
-    display: block;
+    display: none;
     left: 95.04rem;
     position: relative;
     width: max-content;
@@ -273,8 +274,8 @@ video {
 
 #home_text {
     position: relative;
-    left: 35.661rem;
-    bottom: 43.794rem;
+    left: 33.019444444444446vw;
+    bottom: 40.55vw;
     width: max-content;
     z-index: 3;
     color: #EE5E23;
@@ -286,8 +287,8 @@ video {
     z-index: 3;
     display: block;
     position: relative;
-    left: 42rem;
-    bottom: 50rem;
+    left: 38.8888vw;
+    bottom: 46.296vw;
     /* right: 500px;
     left: 680px;
     bottom: 800px; */
@@ -298,8 +299,8 @@ video {
 .scroll {
     position: relative;
     z-index: 4;
-    top: -34.409rem;
-    left: 51.301rem;
+    top: -61.51vh;
+    left: 91.71vh;
     animation: scroll_indicator .9s linear infinite alternate-reverse;
 
 }
@@ -812,6 +813,351 @@ footer {
 
 } */
 
+
+@media screen and (min-width: 1200px) {
+
+    .nav_link_4 {
+        right: 14.875rem;
+    }
+
+    #ics_logo {
+        left: 32vw;
+        bottom: 76.87vh;
+        height: 40%;
+    }
+
+    #home_text {
+        position: relative;
+        left: 24.881vw;
+        bottom: 71.06vh;
+    }
+
+    .scroll {
+        position: relative;
+        z-index: 4;
+        left: 47.733vw;
+        animation: scroll_indicator .9s linear infinite alternate-reverse;
+    }
+
+    .background_video:before {
+        z-index: 1;
+        position: absolute;
+        content: ' ';
+        background-color: rgba(46, 46, 46, 0.795);
+        height: 56rem;
+        width: 100%;
+    }
+
+    video {
+        display: unset;
+        width: auto;
+        height: 56rem;
+        object-fit: cover;
+    }
+
+    .section1 {
+        margin-top: 0;
+    }
+
+    .mission_title h5 {
+        top: -0.5rem;
+        left: 3.438rem;
+        bottom: 3.75rem;
+    }
+
+    .underline {
+        position: absolute;
+        top: 5.75rem;
+        left: 3.625rem;
+    }
+
+    .blg1 {
+        height: 9%;
+        top: 7.815rem;
+        right: 5.882rem;
+    }
+
+    .blg2 {
+        height: 10%;
+        right: 5.005rem;
+        top: 29.158rem;
+    }
+
+    .summary {
+        top: 8.25rem;
+        left: 3.75rem;
+        height: 31.25rem;
+        width: 50%;
+    }
+
+    .p1 {
+        margin-top: 0rem;
+        font-size: 1.3rem;
+        font-weight: 200;
+        line-height: 3.75rem;
+    }
+
+    .schools {
+        margin-top: 60.313rem;
+        height: 50rem;
+    }
+
+    .school_img {
+        column-gap: 44%;
+        width: 32.4rem;
+        left: 2.96rem;
+    }
+
+    .pres_img {
+        width: 36%;
+        border-radius: 6.313rem;
+        margin: 6.25rem;
+        /* margin-top: 3rem; */
+    }
+
+    .quotes {
+        bottom: 12.625rem;
+    }
+
+    .top_quote {
+        position: relative;
+        bottom: 30rem;
+        left: 41.5rem;
+        font-size: 2.3rem;
+        font-weight: bolder;
+        width: 40%;
+    }
+
+    .mid_quote {
+        position: relative;
+        bottom: 29.75rem;
+        left: 41.5rem;
+        font-size: 1.3rem;
+        width: 40%;
+        line-height: 2.625rem;
+    }
+
+    .dash {
+        position: absolute;
+        top: 132.89rem;
+        left: 35.5rem;
+    }
+
+    .pres_title {
+        position: absolute;
+        top: 132.25rem;
+        left: 41.125rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .pres_name {
+        position: absolute;
+        top: 134.5rem;
+        left: 41.688rem;
+        font-size: 2.188rem;
+        font-style: italic;
+    }
+
+    .read_more {
+        position: absolute;
+        top: 138.375rem;
+        left: 47.75rem;
+        padding: 0.313rem 2.188rem;
+        border-radius: 1.25rem;
+        background-color: #17D12F;
+        color: #fff;
+        font-size: 1.125rem;
+        font-weight: 200;
+    }
+
+    .pres_section {
+        height: 40rem;
+    }
+
+    .schoolLocation {
+        display: inline-block;
+        position: absolute;
+        bottom: 1.125rem;
+        left: 0.5rem;
+    }
+
+    .schoolLocation li {
+        list-style-type: none;
+        font-size: 1rem;
+        margin-bottom: 1.875rem;
+    }
+
+    #map {
+        height: 69%;
+        width: 35%;
+        float: right;
+        margin: 8.75rem 2.5rem 0rem 3.125rem;
+        border-radius: 0.625rem;
+    }
+
+}
+
+@media screen and (min-width: 1350px) {
+    .scroll {
+        position: relative;
+        z-index: 4;
+        top: -59.73vh;
+        left: 45.733vw;
+        animation: scroll_indicator .9s linear infinite alternate-reverse;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    #ics_logo {
+        z-index: 3;
+        display: block;
+        position: relative;
+        left: 32vw;
+        bottom: 80.45vh;
+        height: 40%;
+        animation: logo_appear 2s;
+    }
+
+    #home_text {
+        position: relative;
+        left: 26.305066666666672vw;
+        bottom: 78.29vh;
+        width: max-content;
+        z-index: 3;
+        color: #EE5E23;
+        font-size: 2rem;
+        animation: text_appear 8s;
+    }
+
+    .scroll {
+        position: relative;
+        z-index: 4;
+        top: -59.73vh;
+        left: 44.8vw;
+        animation: scroll_indicator .9s linear infinite alternate-reverse;
+    }
+
+    .background_video:before {
+        z-index: 1;
+        position: absolute;
+        content: ' ';
+        background-color: rgba(46, 46, 46, 0.795);
+        max-height: 99.58vh;
+        width: 100%;
+    }
+
+    video {
+        display: unset;
+        width: 100vw;
+        height: 99.58vh;
+        object-fit: cover;
+    }
+
+    .summary {
+        position: absolute;
+        top: 21.25rem;
+        left: 3.75rem;
+        height: 27.25rem;
+        width: 42%;
+    }
+
+    .p1 {
+        margin-top: 0rem;
+        font-size: 1.5rem;
+        font-weight: 200;
+        line-height: 3.75rem;
+    }
+
+    .school_img {
+        display: grid;
+        grid-template-columns: 3.75rem 3.75rem 3.75rem 3.75rem;
+        grid-row: 3.75rem;
+        column-gap: 60%;
+        position: relative;
+        z-index: 8;
+        width: 32.4rem;
+        left: 3.96rem;
+        top: 17.769rem;
+        list-style-type: none;
+    }
+
+    .pres_section {
+        background-color: #adb5bd;
+        height: 45rem;
+    }
+
+    .top_quote {
+        position: relative;
+        bottom: 36rem;
+        left: 51.5rem;
+        font-size: 2.813rem;
+        font-weight: bolder;
+        width: 40%;
+    }
+
+    .mid_quote {
+        position: relative;
+        bottom: 35.75rem;
+        left: 51.5rem;
+        font-size: 1.563rem;
+        width: 40%;
+        line-height: 2.625rem;
+    }
+
+    .dash {
+        position: absolute;
+        top: 148.75rem;
+        left: 46.5rem;
+    }
+
+    .pres_title {
+        position: absolute;
+        top: 148.125rem;
+        left: 51.5rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .pres_name {
+        position: absolute;
+        top: 150.625rem;
+        left: 51.6rem;
+        font-size: 2.188rem;
+        font-style: italic;
+    }
+
+    .read_more {
+        position: absolute;
+        top: 155.375rem;
+        left: 59.75rem;
+        padding: 0.313rem 2.188rem;
+        border-radius: 1.25rem;
+        background-color: #17D12F;
+        color: #fff;
+        font-size: 1.125rem;
+        font-weight: 200;
+    }
+
+    .schoolLocation {
+        display: inline-block;
+        position: absolute;
+        bottom: 2.125rem;
+        left: 3.5rem;
+    }
+
+    #map {
+        height: 70%;
+        width: 37%;
+        float: right;
+        margin: 9.75rem 12.5rem 0rem 1.125rem;
+        border-radius: 0.625rem;
+        left: 3rem;
+    }
+
+}
+
 @media screen and (min-width: 1720px) {
 
     .background_video {
@@ -1314,8 +1660,8 @@ footer {
 
     #home_text {
         position: relative;
-        left: 18.560000000000002rem;
-        bottom: 45.794rem;
+        left: 25vw;
+        bottom: 45rem;
         width: max-content;
         z-index: 3;
         color: #EE5E23;
@@ -1327,16 +1673,16 @@ footer {
         z-index: 3;
         display: block;
         position: relative;
-        left: 23rem;
-        bottom: 47rem;
+        left: 31vw;
+        bottom: 49rem;
         height: 40%;
         animation: logo_appear 2s;
     }
 
     .scroll {
         position: absolute;
-        top: 55rem;
-        left: 49.5rem;
+        top: 98.32vh;
+        left: 66vw;
         animation: scroll_indicator .9s linear infinite alternate-reverse;
 
     }
@@ -1497,11 +1843,11 @@ footer {
         grid-template-columns: auto auto auto auto;
         grid-row: 3.75rem;
         row-gap: 10%;
-        column-gap: 12%;
+        column-gap: 6%;
         position: relative;
         z-index: 8;
-        width: 100%;
-        margin-left: 10rem;
+        width: 95%;
+        margin-left: 0rem;
         left: 0;
         right: auto;
         top: 17.769rem;
@@ -2167,7 +2513,6 @@ footer {
         background-color: rgba(46, 46, 46, 0.795);
         height: 100%;
         width: 100%;
-        /* height: 1000px; */
     }
 
     video {
@@ -2179,8 +2524,8 @@ footer {
 
     #home_text {
         position: relative;
-        left: 10.661000000000001rem;
-        bottom: 46.794rem;
+        left: 14.214666666666668vw;
+        bottom: 46.65rem;
         width: max-content;
         z-index: 3;
         color: #EE5E23;
@@ -2192,57 +2537,14 @@ footer {
         z-index: 3;
         display: block;
         position: relative;
-        left: 16rem;
-        bottom: 50rem;
+        left: 21.333333333333332vw;
+        bottom: 48.39rem;
         height: 40%;
         animation: logo_appear 2s;
     }
 
     .scroll {
         display: none;
-        position: relative;
-        z-index: 4;
-        bottom: 4rem;
-        right: 35rem;
-        /* animation: scroll_indicator .9s linear infinite alternate-reverse; */
-    }
-
-    .scroll:hover {
-        filter: invert(43%) sepia(100%) saturate(1916%) hue-rotate(347deg) brightness(96%) contrast(94%);
-    }
-
-    .scroll:active {
-        transform: scale(.9);
-    }
-
-    @keyframes logo_appear {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 100;
-        }
-    }
-
-    @keyframes text_appear {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 100;
-        }
-    }
-
-    @keyframes scroll_indicator {
-        0% {
-            top: 1rem;
-        }
-
-        100% {
-            top: 1rem;
-        }
     }
 
     section {
@@ -2281,7 +2583,7 @@ footer {
         height: 9%;
         width: 45%;
         top: 4.8149999999999995rem;
-        left: 29.881999999999998rem;
+        left: 53.903226vw;
     }
 
     .blg2 {
@@ -2289,7 +2591,7 @@ footer {
         border-radius: 5.5rem;
         height: 10%;
         width: 43%;
-        right: 4.005rem;
+        right: 4.005vw;
         top: 27.158rem;
     }
 
@@ -2311,9 +2613,10 @@ footer {
 
     .p1 {
         margin-top: 0rem;
-        font-size: 1.3rem;
+        font-size: 1.125rem;
         font-weight: 200;
-        line-height: 2.75rem;
+        line-height: 2.5rem;
+        height: 80.45vh;
     }
 
     .schools {
@@ -2556,7 +2859,7 @@ footer {
         height: 70%;
         width: 45%;
         float: right;
-        top: 8rem;
+        top: 9rem;
         right: 0rem;
         margin: 0;
         border-radius: 0.625rem;
@@ -2594,7 +2897,7 @@ footer {
     .schoolLocation {
         display: inline-block;
         position: absolute;
-        bottom: 3.125rem;
+        bottom: 2.125rem;
         width: 48%;
         left: 1.5rem;
     }
@@ -2612,7 +2915,7 @@ footer {
 
     .schoolLocation li a {
         list-style-type: none;
-        font-size: 1.563rem;
+        font-size: 1.3rem;
         text-decoration: none;
         color: #fff;
         margin-left: 1.875rem;
@@ -2721,8 +3024,15 @@ footer {
     }
 }
 
+@media only screen and (max-width: 860px) {
+}
+
 /* Medium devices (landscape tablets, 768px and down) */
 @media only screen and (max-width: 768px) {
+
+    body {
+            overflow-x: hidden;
+        }
 
     /*nav links Settings*/
     nav {
@@ -2813,8 +3123,8 @@ footer {
 
     #home_text {
         position: relative;
-        left: 2rem;
-        bottom: 48rem;
+        left: 4vw;
+        bottom: 47rem;
         width: max-content;
         z-index: 3;
         color: #EE5E23;
@@ -2827,8 +3137,8 @@ footer {
         z-index: 3;
         display: block;
         position: relative;
-        bottom: 50rem;
-        left: 8rem;
+        bottom: 51rem;
+        left: 17vw;
         height: 40%;
     }
 
@@ -2937,9 +3247,9 @@ footer {
 
     .schools_title {
         text-align: center;
-        position: relative;
-        top: 6.25rem;
-        right: 4rem;
+        position: none;
+        top: 5rem;
+        right: auto;
         font-size: 3.75rem;
         color: white;
     }
@@ -2954,22 +3264,19 @@ footer {
         font-weight: 600;
     }
 
-
     .school_img {
         display: grid;
         direction: unset;
         text-overflow: unset;
         overflow: unset;
-        grid-template-columns: 11.75rem 11.75rem;
-        grid-row: 3.75rem;
-        row-gap: 15%;
-        column-gap: 10%;
+        row-gap: 22%;
+        column-gap: 25%;
         position: relative;
         z-index: 8;
-        width: 70%;
+        width: 65%;
         margin-left: 6rem;
-        left: 0;
-        top: 10.769rem;
+        left: 1rem;
+        top: 12rem;
         list-style-type: none;
     }
 
@@ -3126,13 +3433,9 @@ footer {
     footer {
         order: 4;
         position: relative;
-        height: 65rem;
-        /*background-color: #343A40;*/
+        height: 58rem;
         background: linear-gradient(130deg, #585858, #262727, #606161);
         background-size: 600% 600%;
-        /*animation: Grad_BG 15s ease infinite;
-                    -webkit-animation: Grad_BG 15s ease infinite;
-                    -moz-animation: Grad_BG 15s ease infinite;*/
     }
 
     #address {
@@ -3145,8 +3448,8 @@ footer {
         float: right;
         margin: 3.75rem 12.5rem 0rem 3.125rem;
         border-radius: 0.625rem;
-        top: 8rem;
-        left: 7.5rem;
+        top: 9rem;
+        left: 8.5rem;
     }
 
     .ics_icon {
@@ -3181,10 +3484,9 @@ footer {
     .schoolLocation {
         display: inline-block;
         position: absolute;
-        width: 101%;
-        bottom: 3.125rem;
+        width: 100%;
         bottom: 1rem;
-        left: 2.5rem;
+        left: 0.5rem;
     }
 
     .schoolLocation img {
@@ -3194,14 +3496,13 @@ footer {
 
     .schoolLocation li {
         list-style-type: none;
-        font-size: 1.563rem;
-        margin-bottom: 1.875rem;
-        width: 80%;
+        margin-bottom: 0.875rem;
+        width: 100%;
     }
 
     .schoolLocation li a {
         list-style-type: none;
-        font-size: 1.563rem;
+        font-size: 1.3rem;
         text-decoration: none;
         color: #fff;
         margin-left: 1.875rem;
@@ -3781,6 +4082,10 @@ footer {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
+    body {
+            overflow-x: hidden;
+        }
+
     /*nav links Settings*/
     nav {
         order: 1;
@@ -3858,12 +4163,11 @@ footer {
 
     #home_text {
         position: relative;
-        left: 2rem;
+        left: 5.33vw;
         bottom: 46rem;
-        width: max-content;
+        width: 31.25rem;
         z-index: 3;
         color: #EE5E23;
-        width: 100%;
         font-size: 2rem;
         animation: text_appear 8s;
     }
@@ -3873,27 +4177,8 @@ footer {
         display: block;
         position: relative;
         bottom: 48rem;
-        left: 5rem;
+        left: 13.3333vw;
         height: 35%;
-    }
-
-    .scroll {
-        position: relative;
-        z-index: 4;
-        top: 25rem;
-        left: 14.2rem;
-        animation: scroll_indicator .6s linear infinite alternate-reverse;
-
-    }
-
-    @keyframes scroll_indicator {
-        0% {
-            top: 24.5rem;
-        }
-
-        100% {
-            top: 26rem;
-        }
     }
 
     .section1 {
@@ -3984,7 +4269,7 @@ footer {
         text-align: center;
         position: relative;
         top: 6.25rem;
-        right: 3rem;
+        right: 0rem;
         font-size: 3.75rem;
         color: white;
     }
@@ -4004,12 +4289,10 @@ footer {
         display: grid;
         grid-template-columns: 11.75rem 11.75rem;
         grid-row: 3.75rem;
-        row-gap: 15%;
-        column-gap: 10%;
         position: relative;
         z-index: 8;
-        width: 100%;
-        left: 2rem;
+        width: 65%;
+        margin: 0;
         top: 10.769rem;
         list-style-type: none;
     }
@@ -4155,7 +4438,7 @@ footer {
 
     .accordion {
         width: 100%;
-        margin-left: 0;
+        margin-left: 1rem;
     }
 
     .accordion-item {
@@ -4166,13 +4449,9 @@ footer {
     footer {
         order: 4;
         position: relative;
-        height: 65rem;
-        /*background-color: #343A40;*/
+        height: 58rem;
         background: linear-gradient(130deg, #585858, #262727, #606161);
         background-size: 600% 600%;
-        /*animation: Grad_BG 15s ease infinite;
-        -webkit-animation: Grad_BG 15s ease infinite;
-        -moz-animation: Grad_BG 15s ease infinite;*/
     }
 
     #address {
@@ -4221,7 +4500,7 @@ footer {
         display: inline-block;
         position: absolute;
         bottom: 3.125rem;
-        bottom: -1rem;
+        bottom: 3rem;
         left: .5rem;
     }
 
@@ -4233,13 +4512,13 @@ footer {
     .schoolLocation li {
         list-style-type: none;
         font-size: 1.563rem;
-        margin-bottom: 1.875rem;
+        margin-bottom: 1rem;
         width: 90%;
     }
 
     .schoolLocation li a {
         list-style-type: none;
-        font-size: 1.563rem;
+        font-size: 1.2rem;
         text-decoration: none;
         color: #fff;
         margin-left: 1.875rem;
@@ -4265,7 +4544,7 @@ footer {
     }
 
     .locDescription {
-        display: none;
+        display: unset;
         position: absolute;
         left: 15.625rem;
         font-size: 1.5rem;
